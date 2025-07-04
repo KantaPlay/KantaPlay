@@ -1,0 +1,58 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #000000, #1a1a1a);
+    color: #fff;
+    text-align: center;
+}
+header {
+    padding: 20px;
+}
+.logo {
+    width: 220px;
+}
+h1 {
+    font-size: 3em;
+    color: gold;
+    text-shadow: 2px 2px 8px #000;
+}
+.carousel {
+    margin: 40px auto;
+    max-width: 90%;
+    overflow: hidden;
+}
+.slide {
+    background-color: #111;
+    border: 1px solid gold;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+.buttons {
+    margin: 30px auto;
+}
+a.whatsapp, a.pix {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #25D366;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a.pix {
+    background-color: #0abdc6;
+}
+a:hover {
+    transform: scale(1.05);
+}
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
