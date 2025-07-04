@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>Download</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function mostrarDownload() {
+      document.getElementById('agradecimento').style.display = 'none';
+      document.getElementById('downloadBtn').style.display = 'block';
+    }
+    window.onload = function() {
+      setTimeout(mostrarDownload, 3000);
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -11,14 +20,13 @@
     <h2>Download do Pacote Sertanejo Raiz</h2>
   </header>
   <main style="min-height: 400px;">
-    <a href="https://seulink.com.br/downloadpacotesertanejo" class="botao" download>📥 Baixar Agora</a>
+    <div id="agradecimento" style="color: gold; font-size: 1.1em; margin-top: 20px;">
+      ❤️ Muito obrigado pelo seu apoio! Preparando seu download...
+    </div>
+    <div id="downloadBtn" style="display: none; margin-top: 30px;">
+      <a href="https://seulink.com.br/downloadpacotesertanejo" class="botao" download>📥 Baixar Agora</a>
+    </div>
   </main>
-
-  <footer>
-    <p style="margin-top: 40px; color: gray; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
-
-
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
