@@ -6,7 +6,7 @@ body {
   padding: 20px;
 }
 .logo {
-  max-width: 400px;
+  max-width: 300px;
   margin: 20px auto;
 }
 h1, h2 {
@@ -41,3 +41,5 @@ h1, h2 {
   color: black;
   box-shadow: 0 0 10px #1ebe57;
 }
+main { min-height: 400px; }
+footer { text-align: center; }
