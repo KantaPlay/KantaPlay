@@ -4,6 +4,28 @@
   <meta charset="UTF-8">
   <title>Pacote Sertanejo Raiz</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function enviarParaWhatsApp() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      let musicasSelecionadas = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          musicasSelecionadas.push(cb.parentElement.textContent.trim());
+        }
+      });
+
+      if (musicasSelecionadas.length === 0) {
+        alert('Por favor, selecione ao menos uma música.');
+        return;
+      }
+
+      const mensagem = `Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:%0A%0A` + 
+        musicasSelecionadas.map(m => `- ${m}`).join('%0A');
+
+      const url = `https://wa.me/5511972330562?text=${mensagem}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -23,15 +45,9 @@
       <label><input type="checkbox"> João Mineiro & Marciano - Faz Mais Uma Vez Comigo</label><br>
       <label><input type="checkbox"> Joaquim & Manuel - Boate Azul</label><br>
       <br>
-      <button type="button" onclick="window.location.href='pagamento.html'">Avançar para Pagamento</button>
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
     </form>
   </main>
-
-  <footer>
-    <p style="margin-top: 40px; color: gray; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
-
-
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
