@@ -20,10 +20,35 @@
 
     <section class="buttons">
         <a href="https://wa.me/5511972330562?text=Olá!%20Quero%20falar%20sobre%20os%20playbacks%20da%20KantaPlay!" target="_blank" class="whatsapp">💬 WhatsApp</a>
-        <a href="https://mpago.la/1GUzuuh" target="_blank" class="btn pix" style="background-color: #32cd32; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; font-size: 18px; display: inline-block; margin-top: 20px;">
-  💸 Pagar com PIX - R$ 20
-</a>
+        <!-- BOTÃO PIX ANIMADO -->
+<a href="https://mpago.la/1GUzuuh" target="_blank" class="pix-btn">💳 Pagar com Pix</a>
 
+<style>
+.pix-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  animation: pixGlow 1s infinite;
+  transition: transform 0.2s;
+  color: white;
+  background-color: #34C759; /* cor inicial verde-pix */
+  box-shadow: 0 0 10px #34C759;
+}
+.pix-btn:hover {
+  transform: scale(1.05);
+}
+@keyframes pixGlow {
+  0%   { background-color: #34C759; box-shadow: 0 0 10px #34C759; }
+  25%  { background-color: #1E90FF; box-shadow: 0 0 15px #1E90FF; }
+  50%  { background-color: #FFD700; box-shadow: 0 0 15px #FFD700; }
+  75%  { background-color: #FF4500; box-shadow: 0 0 15px #FF4500; }
+  100% { background-color: #34C759; box-shadow: 0 0 10px #34C759; }
+}
+</style>
 
     </section>
 
