@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <title>Catálogo de Playbacks</title>
   <link rel="stylesheet" href="style.css">
+  
+  <script>
+    function enviarParaWhatsApp() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      let musicasSelecionadas = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
+        }
+      });
+
+      if (musicasSelecionadas.length === 0) {
+        alert('Por favor, selecione ao menos uma música.');
+        return;
+      }
+
+      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
+        musicasSelecionadas.map(m => "- " + m).join("\n");
+
+      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
+      window.open(url, '_blank');
+    }
+  </script>
+
 </head>
 <body>
   <header>
@@ -11,37 +35,23 @@
     <h2>Catálogo Completo de Playbacks</h2>
   </header>
   <main style="min-height: 400px;">
-    <h3>🎤 Sertanejo Raiz</h3>
-    <ul>
-      <li>Trio Parada Dura - As Andorinhas</li>
-      <li>Chico Rey & Paraná - Quem Será Seu Outro Amor</li>
-      <li>Alan & Aladim - Lembranças</li>
-    </ul>
+    <form id="form-musicas">
+      <h3>🎤 Sertanejo Raiz</h3>
+      <label><input type="checkbox"> Trio Parada Dura - As Andorinhas</label><br>
+      <label><input type="checkbox"> Alan & Aladim - Lembranças</label><br>
 
-    <h3>🎶 Sertanejo Universitário</h3>
-    <ul>
-      <li>Luan Santana - Meteoro</li>
-      <li>Jorge & Mateus - Amo Noite e Dia</li>
-      <li>Henrique & Juliano - Cuida Bem Dela</li>
-    </ul>
+      <h3>🎶 Sertanejo Universitário</h3>
+      <label><input type="checkbox"> Jorge & Mateus - Amo Noite e Dia</label><br>
+      <label><input type="checkbox"> Luan Santana - Meteoro</label><br>
 
-    <h3>💘 Românticas</h3>
-    <ul>
-      <li>Fábio Jr. - Alma Gêmea</li>
-      <li>José Augusto - Chuvas de Verão</li>
-      <li>Roberto Carlos - Como é Grande o Meu Amor por Você</li>
-    </ul>
+      <h3>💘 Românticas</h3>
+      <label><input type="checkbox"> Fábio Jr. - Alma Gêmea</label><br>
+      <label><input type="checkbox"> Roberto Carlos - Como é Grande o Meu Amor por Você</label><br>
 
-    <br>
-    <a href="pagamento.html" class="botao">Quero comprar meu pacote</a>
+      <br>
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista de músicas no WhatsApp</button>
+    </form>
   </main>
-
-
-  <footer>
-    <p style="margin-top: 40px; color: gray; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
-
-
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">

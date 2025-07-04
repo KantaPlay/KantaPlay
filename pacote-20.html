@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <title>Pacote 10 Playbacks por R$ 20</title>
   <link rel="stylesheet" href="style.css">
+  
+  <script>
+    function enviarParaWhatsApp() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      let musicasSelecionadas = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
+        }
+      });
+
+      if (musicasSelecionadas.length === 0) {
+        alert('Por favor, selecione ao menos uma música.');
+        return;
+      }
+
+      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
+        musicasSelecionadas.map(m => "- " + m).join("\n");
+
+      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
+      window.open(url, '_blank');
+    }
+  </script>
+
 </head>
 <body>
   <header>
@@ -23,16 +47,9 @@
       <label><input type="checkbox"> Eduardo Costa - Me Apaixonei</label><br>
       <label><input type="checkbox"> César Menotti & Fabiano - Leilão</label><br>
       <br>
-      <button type="button" onclick="window.location.href='pagamento.html'">Avançar para Pagamento</button>
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
     </form>
   </main>
-
-
-  <footer>
-    <p style="margin-top: 40px; color: gray; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
-
-
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
