@@ -10,7 +10,7 @@
       let musicasSelecionadas = [];
       checkboxes.forEach(cb => {
         if (cb.checked) {
-          musicasSelecionadas.push(cb.parentElement.textContent.trim());
+          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
         }
       });
 
@@ -19,10 +19,10 @@
         return;
       }
 
-      const mensagem = `Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:%0A%0A` + 
-        musicasSelecionadas.map(m => `- ${m}`).join('%0A');
+      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
+        musicasSelecionadas.map(m => "- " + m).join("\n");
 
-      const url = `https://wa.me/5511972330562?text=${mensagem}`;
+      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
       window.open(url, '_blank');
     }
   </script>
