@@ -8,20 +8,18 @@
 <body>
   <header>
     <img src="logo.png" alt="Logo KantaPlay" class="logo">
-    <h2>Pagamento</h2>
+    <h2>Pagamento via Pix</h2>
   </header>
   <main style="min-height: 400px;">
-    <p>Faça o Pix usando o botão abaixo:</p>
-    <a href="https://mpago.la/1GUzuuh" class="botao-pix">💳 Pagar com Pix</a>
-    <br><br>
-    <button onclick="window.location.href='download.html'">Já paguei, quero baixar</button>
+    <section style="background-color: #111; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; margin: 30px auto;">
+      <p style="color: white;">🎵 Cada playback custa <strong style='color: gold;'>R$3</strong>. Escolha os seus no catálogo e faça o Pix com o valor correspondente.</p>
+      <p style="margin-top: 10px; color: white;">🔑 Chave Pix:</p>
+      <p style="font-size: 1.2em; color: gold;"><strong>11972330562</strong></p>
+      <button onclick="navigator.clipboard.writeText('11972330562'); alert('Chave Pix copiada!');" class="botao">📋 Copiar chave Pix</button>
+      <p style="color: #aaa; margin-top: 15px;">Após o pagamento, envie a lista das músicas e o comprovante para o WhatsApp abaixo:</p>
+      <a href="https://wa.me/5511972330562?text=Olá,+já+fiz+o+Pix+e+segue+a+lista+dos+playbacks+que+escolhi:" class="botao-whatsapp">📲 Enviar no WhatsApp</a>
+    </section>
   </main>
-
-  <footer>
-    <p style="margin-top: 40px; color: gray; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
-
-
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
