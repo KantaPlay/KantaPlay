@@ -36,14 +36,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Escolha suas músicas</h2>
-  <form id="form-musicas">
-    <label><input type="checkbox" name="musica" value="as_andorinhas"> Trio Parada Dura - As Andorinhas</label><br>
-    <label><input type="checkbox" name="musica" value="quem_sera"> Chico Rey & Paraná - Quem Será Seu Outro Amor</label><br>
-    <label><input type="checkbox" name="musica" value="lembrancas"> Alan & Aladim - Lembranças</label><br>
-    <!-- Adicione mais aqui -->
-    <button type="button" onclick="window.location.href='pagamento.html'">Avançar para Pagamento</button>
-  </form>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h2>Pacote Sertanejo Raiz - Escolha suas músicas</h2>
+  </header>
+  <main>
+    <form id="form-musicas">
+      <label><input type="checkbox" name="musica" value="as_andorinhas"> Trio Parada Dura - As Andorinhas</label><br>
+      <label><input type="checkbox" name="musica" value="quem_sera"> Chico Rey & Paraná - Quem Será Seu Outro Amor</label><br>
+      <label><input type="checkbox" name="musica" value="lembrancas"> Alan & Aladim - Lembranças</label><br>
+      <label><input type="checkbox" name="musica" value="fuscao_preto"> Almir Rogério - Fuscão Preto</label><br>
+      <label><input type="checkbox" name="musica" value="panela_velha"> Sérgio Reis - Panela Velha</label><br>
+      <label><input type="checkbox" name="musica" value="pagode_em_brasilia"> Tião Carreiro & Pardinho - Pagode em Brasília</label><br>
+      <label><input type="checkbox" name="musica" value="blusa_vermelha"> Trio Parada Dura - Blusa Vermelha</label><br>
+      <label><input type="checkbox" name="musica" value="telefone_mudo"> Trio Parada Dura - Telefone Mudo</label><br>
+      <label><input type="checkbox" name="musica" value="faz_mais_uma_vez_comigo"> João Mineiro & Marciano - Faz Mais Uma Vez Comigo</label><br>
+      <label><input type="checkbox" name="musica" value="boate_azul"> Joaquim & Manuel - Boate Azul</label><br>
+      <br>
+      <button type="button" onclick="window.location.href='pagamento.html'">Avançar para Pagamento</button>
+    </form>
+  </main>
 </body>
 </html>
 
@@ -53,13 +65,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Pagamento</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Pagamento</h2>
-  <p>Faça o Pix para:</p>
-  <strong>https://mpago.la/1GUzuuh</strong>
-  <br><br>
-  <button onclick="window.location.href='download.html'">Já paguei, quero baixar</button>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h2>Pagamento</h2>
+  </header>
+  <main>
+    <p>Faça o Pix no botão abaixo:</p>
+    <a href="https://mpago.la/1GUzuuh" class="botao-pix">💳 Pagar com Pix</a>
+    <br><br>
+    <button onclick="window.location.href='download.html'">Já paguei, quero baixar</button>
+  </main>
 </body>
 </html>
 
@@ -69,9 +87,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Download</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Download do Pacote Sertanejo Raiz</h2>
-  <a href="https://seulink.com.br/downloadpacotesertanejo" download>📥 Baixar agora</a>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h2>Download do Pacote Sertanejo Raiz</h2>
+  </header>
+  <main>
+    <a href="https://seulink.com.br/downloadpacotesertanejo" download class="botao">📥 Baixar agora</a>
+  </main>
 </body>
 </html>
