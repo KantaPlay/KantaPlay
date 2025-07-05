@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KantaPlay</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>KantaPlay - Catálogo por Estilo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #c0392b;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #d35400;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo KantaPlay" class="logo">
-    <h1>Sua diversão começa aqui</h1>
-  </header>
-
-  <main>
-    <div class="carrossel">
-      <a href="sertanejo-raiz.html" class="botao">🎤 Pacote Sertanejo Raiz</a>
-      <a href="pacote-20.html" class="botao">🎶 10 Playbacks com Letra por R$ 20</a>
-      <a href="catalogo.html" class="botao">🔥 Ver catálogo dos playbacks!</a>
-      <a href="zeze.html" class="botao">🎤 Zezé Di Camargo & Luciano</a>
-
+    <h1>🎶 Bem-vindo ao KantaPlay!</h1>
+    <p>Escolha um estilo musical abaixo:</p>
+    <div class="button-container">
+        <a class="btn" href="sertanejo_raiz/zeze_di_camargo_e_luciano.html">Sertanejo Raiz</a>
+        <a class="btn" href="sertanejo_universitario/jorge_e_mateus.html">Sertanejo Universitário</a>
+        <a class="btn" href="arrocha/pablo.html">Arrocha</a>
+        <a class="btn" href="brega/reginaldo_rossi.html">Brega</a>
+        <a class="btn" href="mpb/djavan.html">MPB</a>
+        <a class="btn" href="samba/zeca_pagodinho.html">Samba</a>
+        <a class="btn" href="pagode/grupo_revelacao.html">Pagode</a>
     </div>
-
-    <section style="background-color: #111; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; margin: 30px auto;">
-      <p style="color: white;">🎵 Cada playback custa <strong style='color: gold;'>R$3</strong>. Faça o Pix com o valor total para a chave:</p>
-      <p style="font-size: 1.2em; color: gold;"><strong>11972330562</strong></p>
-      <button onclick="navigator.clipboard.writeText('11972330562'); alert('Chave Pix copiada!');" class="botao">📋 Copiar chave Pix</button>
-      <p style="color: #aaa; margin-top: 15px;">Depois, envie o comprovante e as músicas desejadas no WhatsApp:</p>
-      <a href="https://wa.me/5511972330562?text=Olá,+já+fiz+o+Pix+e+segue+o+comprovante+e+os+playbacks+que+escolhi:" class="botao-whatsapp">📲 Enviar no WhatsApp</a>
-    </section>
-
-    <section style="margin-top: 40px;">
-      <div style="background-color: #1a1a1a; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; margin: 0 auto;">
-        <p style="color: white; font-size: 1em; margin-bottom: 20px;">
-          🙏 Se você curte meu trabalho e não canta, mas quer ajudar, deixe aqui sua doação. Sua contribuição faz toda a diferença!
-        </p>
-        <p style="font-size: 1.2em; color: gold;"><strong>11972330562</strong></p>
-        <button onclick="navigator.clipboard.writeText('11972330562'); alert('Chave Pix copiada!');" class="botao">💛 Copiar chave Pix para doar</button>
-        <p style="color: #aaa; margin-top: 15px;">Você também pode me chamar no WhatsApp:</p>
-        <a href="https://wa.me/5511972330562?text=Quero+fazer+uma+doação+para+ajudar+seu+trabalho!" class="botao-whatsapp">📲 Falar com Paulo</a>
-      </div>
-    </section>
-  </main>
-
-  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
-    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-    <p style="color: #888; font-size: 0.8em;">
-      <a href="https://www.instagram.com/kantaplay" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
-      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
-      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
-    </p>
-  </footer>
 </body>
 </html>

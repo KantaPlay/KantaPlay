@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Reginaldo Rossi - Brega</title>
+    <title>Falcão - Brega</title>
 </head>
 <body>
-    <h1>Reginaldo Rossi</h1>
-    <form id="form-reginaldo_rossi">
+    <h1>Falcão</h1>
+    <form id="form-falcao">
         <label><input type="checkbox" name="musica" value="Música 1"> Música 1</label><br>
         <label><input type="checkbox" name="musica" value="Música 2"> Música 2</label><br>
         <label><input type="checkbox" name="musica" value="Música 3"> Música 3</label><br>
@@ -14,7 +14,7 @@
     </form>
     <script>
         function enviarWhatsApp() {
-            const form = document.getElementById('form-reginaldo_rossi');
+            const form = document.getElementById('form-falcao');
             const musicas = Array.from(form.elements['musica'])
                                   .filter(el => el.checked)
                                   .map(el => el.value);
