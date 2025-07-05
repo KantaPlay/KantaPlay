@@ -4,61 +4,26 @@
   <meta charset="UTF-8">
   <title>Catálogo de Playbacks</title>
   <link rel="stylesheet" href="style.css">
-  
-  <script>
-    function enviarParaWhatsApp() {
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-      let musicasSelecionadas = [];
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
-        }
-      });
-
-      if (musicasSelecionadas.length === 0) {
-        alert('Por favor, selecione ao menos uma música.');
-        return;
-      }
-
-      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
-        musicasSelecionadas.map(m => "- " + m).join("\n");
-
-      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
-      window.open(url, '_blank');
-    }
-  </script>
-
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo KantaPlay" class="logo">
     <h2>Catálogo Completo de Playbacks</h2>
     <a href="sertanejo-raiz.html" class="botao">🎸 Sertanejo Raiz</a>
-      <a href="sertanejo-universitario.html" class="botao">🎶 Sertanejo Universitário</a>
-      <a href="arrocha.html" class="botao">💃 Arrocha</a>
-      <a href="brega.html" class="botao">🎤 Brega</a>
-      <a href="mpb.html" class="botao">🎼 MPB</a>
-      <a href="samba.html" class="botao">🥁 Samba</a>
-      <a href="pagode.html" class="botao">🎷 Pagode</a>
+    <a href="sertanejo-universitario.html" class="botao">🎶 Sertanejo Universitário</a>
+    <a href="arrocha.html" class="botao">💃 Arrocha</a>
+    <a href="brega.html" class="botao">🎤 Brega</a>
+    <a href="mpb.html" class="botao">🎼 MPB</a>
+    <a href="samba.html" class="botao">🥁 Samba</a>
+    <a href="pagode.html" class="botao">🎷 Pagode</a>
   </header>
+
   <main style="min-height: 400px;">
-    <form id="form-musicas">
-      <h3>🎤 Sertanejo Raiz</h3>
-      <label><input type="checkbox"> Trio Parada Dura - As Andorinhas</label><br>
-      <label><input type="checkbox"> Alan & Aladim - Lembranças</label><br>
-
-      <h3>🎶 Sertanejo Universitário</h3>
-      <label><input type="checkbox"> Jorge & Mateus - Amo Noite e Dia</label><br>
-      <label><input type="checkbox"> Luan Santana - Meteoro</label><br>
-
-      <h3>💘 Românticas</h3>
-      <label><input type="checkbox"> Fábio Jr. - Alma Gêmea</label><br>
-      <label><input type="checkbox"> Roberto Carlos - Como é Grande o Meu Amor por Você</label><br>
-
-      <br>
-      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista de músicas no WhatsApp</button>
-    </form>
+    <p style="text-align: center; font-size: 1.1em; margin-top: 30px; color: #555;">
+      Clique no estilo musical para acessar os artistas e selecionar suas músicas favoritas. 🎧
+    </p>
   </main>
+
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
