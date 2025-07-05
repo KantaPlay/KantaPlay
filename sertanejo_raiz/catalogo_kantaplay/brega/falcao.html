@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Falcão - Brega</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        h1 {
+            color: #c0392b;
+        }
+        .musica {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1e8449;
+        }
+    </style>
+</head>
+<body>
+    <h1>Falcão</h1>
+    <form id="form-falcao">
+        <div class="musica"><label><input type="checkbox" name="musica" value="Música 1"> Música 1</label></div>
+        <div class="musica"><label><input type="checkbox" name="musica" value="Música 2"> Música 2</label></div>
+        <div class="musica"><label><input type="checkbox" name="musica" value="Música 3"> Música 3</label></div>
+        <button type="button" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+    </form>
+    <script>
+        function enviarWhatsApp() {
+            const form = document.getElementById('form-falcao');
+            const musicas = Array.from(form.elements['musica'])
+                                  .filter(el => el.checked)
+                                  .map(el => el.value);
+            const mensagem = 'Olá, já fiz o Pix e quero essas músicas:\n' + musicas.join('\n');
+            const url = 'https://wa.me/5511972330562?text=' + encodeURIComponent(mensagem);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
