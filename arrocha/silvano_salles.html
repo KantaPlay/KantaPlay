@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Silvano Salles - Arrocha</title>
+</head>
+<body>
+    <h1>Silvano Salles</h1>
+    <form id="form-silvano_salles">
+        <label><input type="checkbox" name="musica" value="Musica 1"> Música 1</label><br>
+        <label><input type="checkbox" name="musica" value="Musica 2"> Música 2</label><br>
+        <label><input type="checkbox" name="musica" value="Musica 3"> Música 3</label><br>
+        <button type="button" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+    </form>
+    <script>
+        function enviarWhatsApp() {
+            const form = document.getElementById('form-silvano_salles');
+            const musicas = Array.from(form.elements['musica'])
+                                  .filter(el => el.checked)
+                                  .map(el => el.value);
+            const mensagem = 'Olá, já fiz o Pix e quero essas músicas:\n' + musicas.join('\n');
+            const url = 'https://wa.me/5511972330562?text=' + encodeURIComponent(mensagem);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
