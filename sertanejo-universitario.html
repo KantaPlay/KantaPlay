@@ -1,73 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Sertanejo Universitário</title>
-  
-<style>
-  body {
-    background-color: #000;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-  }
-  h1 {
-    color: gold;
-    margin-bottom: 30px;
-  }
-  .button-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .artist-button {
-    padding: 15px 10px;
-    background-color: #111;
-    border: 2px solid gold;
-    border-radius: 12px;
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 0 8px gold;
-    transition: all 0.3s ease;
-  }
-  .artist-button:hover {
-    background-color: gold;
-    color: black;
-  }
-</style>
+  <title>KantaPlay - Sertanejo Universitário</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
 
+    h1 {
+      color: gold;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px gold;
+    }
+
+    .container-vertical {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .coluna {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .botao-estilo {
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 2px solid gold;
+      color: white;
+      background: black;
+      border-radius: 12px;
+      box-shadow: 0 0 8px gold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 220px;
+    }
+
+    .botao-estilo:hover {
+      background: gold;
+      color: black;
+      box-shadow: 0 0 20px gold;
+    }
+
+    @media (max-width: 768px) {
+      .container-vertical {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Artistas - Sertanejo Universitário</h1>
-  
-<div class="button-container">
-  <a class="artist-button" href="jorge-e-mateus.html">Jorge e Mateus</a>
-<a class="artist-button" href="luan-santana.html">Luan Santana</a>
-<a class="artist-button" href="henrique-e-juliano.html">Henrique e Juliano</a>
-<a class="artist-button" href="zé-neto-e-cristiano.html">Zé Neto e Cristiano</a>
-<a class="artist-button" href="gusttavo-lima.html">Gusttavo Lima</a>
-<a class="artist-button" href="marília-mendonça.html">Marília Mendonça</a>
-<a class="artist-button" href="maiara-e-maraisa.html">Maiara e Maraisa</a>
-<a class="artist-button" href="simone-e-simaria.html">Simone e Simaria</a>
-<a class="artist-button" href="matheus-e-kauan.html">Matheus e Kauan</a>
-<a class="artist-button" href="wesley-safadão.html">Wesley Safadão</a>
-<a class="artist-button" href="fernando-e-sorocaba.html">Fernando e Sorocaba</a>
-<a class="artist-button" href="humberto-e-ronaldo.html">Humberto e Ronaldo</a>
-<a class="artist-button" href="joão-bosco-e-vinícius.html">João Bosco e Vinícius</a>
-<a class="artist-button" href="jads-e-jadson.html">Jads e Jadson</a>
-<a class="artist-button" href="israel-e-rodolffo.html">Israel e Rodolffo</a>
-<a class="artist-button" href="diego-e-victor-hugo.html">Diego e Victor Hugo</a>
-<a class="artist-button" href="hugo-e-guilherme.html">Hugo e Guilherme</a>
-<a class="artist-button" href="fred-e-gustavo.html">Fred e Gustavo</a>
-<a class="artist-button" href="george-henrique-e-rodrigo.html">George Henrique e Rodrigo</a>
-<a class="artist-button" href="marcos-e-belutti.html">Marcos e Belutti</a>
-</div>
-
+  <h1>Sertanejo Universitário</h1>
+  <div class="container-vertical">
+    <div class="coluna">
+      <button class="botao-estilo">Abel e Caim</button>
+      <button class="botao-estilo">Alan e Aladin</button>
+      <button class="botao-estilo">Alan e Alex</button>
+      <button class="botao-estilo">Ataide Alexandre</button>
+      <button class="botao-estilo">Belmonte e Amaraí</button>
+      <button class="botao-estilo">Brenno e Mateus</button>
+      <button class="botao-estilo">Bruno e Marrone</button>
+      <button class="botao-estilo">Cesar Menotti e Fabiano</button>
+      <button class="botao-estilo">Cezar e Paulinho</button>
+      <button class="botao-estilo">Chico Rey e Paraná</button>
+      <button class="botao-estilo">Chitãozinho e Xororó</button>
+      <button class="botao-estilo">Christian e Ralf</button>
+      <button class="botao-estilo">Conrado e Aleksandro</button>
+      <button class="botao-estilo">Cristiano Araújo</button>
+      <button class="botao-estilo">Daniel</button>
+    </div>
+    <div class="coluna">
+      <button class="botao-estilo">Diego e Victor Hugo</button>
+      <button class="botao-estilo">Edson e Hudson</button>
+      <button class="botao-estilo">Felipe e Falcão</button>
+      <button class="botao-estilo">Fernando e Sorocaba</button>
+      <button class="botao-estilo">Fred e Gustavo</button>
+      <button class="botao-estilo">Gian e Giovani</button>
+      <button class="botao-estilo">Guilherme e Santiago</button>
+      <button class="botao-estilo">Gusttavo Lima</button>
+      <button class="botao-estilo">Humberto e Ronaldo</button>
+      <button class="botao-estilo">Hugo e Tiago</button>
+      <button class="botao-estilo">Israel e Rodolffo</button>
+      <button class="botao-estilo">Jads e Jadson</button>
+      <button class="botao-estilo">Jorge e Mateus</button>
+      <button class="botao-estilo">João Bosco e Vinícius</button>
+      <button class="botao-estilo">João Neto e Frederico</button>
+    </div>
+  </div>
 </body>
 </html>
