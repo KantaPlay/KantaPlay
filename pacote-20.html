@@ -4,7 +4,58 @@
   <meta charset="UTF-8">
   <title>Pacote 10 Playbacks por R$ 20</title>
   <link rel="stylesheet" href="style.css">
-  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f5;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 12px;
+    }
+
+    .botao-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .botao-whatsapp:hover {
+      transform: scale(1.05);
+    }
+  </style>
   <script>
     function enviarParaWhatsApp() {
       const checkboxes = document.querySelectorAll('input[type=checkbox]');
@@ -27,16 +78,16 @@
       window.open(url, '_blank');
     }
   </script>
-
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo KantaPlay" class="logo">
-    <h2>Escolha quantas músicas quiser</h2>
-  </header>
-  <main style="min-height: 400px;">
-    <form id="form-musicas">
-      <label><input type="checkbox"> A Hora E Agora - Jorge & Mateus</label><br>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Logo KantaPlay" class="logo">
+      <h2>Escolha quantas músicas quiser</h2>
+    </header>
+    <main style="min-height: 400px;">
+      <form id="form-musicas">
+        <label><input type="checkbox"> A Hora E Agora - Jorge & Mateus</label><br>
 <label><input type="checkbox"> Alguem No Seu Lugar Jorge E Matheus</label><br>
 <label><input type="checkbox"> Amo Noite Dia Misterios Se Eu Pedir Volta</label><br>
 <label><input type="checkbox"> Amo Noite E Dia - Jorge & Mateus</label><br>
@@ -140,17 +191,18 @@
 <label><input type="checkbox"> Um Dia Te Levo Comigo Jorge E Matheus</label><br>
 <label><input type="checkbox"> Vestigios Jorge Matheus</label><br>
 <label><input type="checkbox"> Voce É Minha Religiao - Jorge & Mateus</label><br>
-      <br>
-      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
-    </form>
-  </main>
-  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
-    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-    <p style="color: #888; font-size: 0.8em;">
-      <a href="https://www.instagram.com/kantaplay" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
-      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
-      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
-    </p>
-  </footer>
+        <br>
+        <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
+      </form>
+    </main>
+    <footer style="background-color: #111; padding: 20px; margin-top: 40px; text-align: center;">
+      <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+      <p style="color: #888; font-size: 0.8em;">
+        <a href="https://www.instagram.com/kantaplay" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
+        <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
+        <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
