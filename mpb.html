@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,11 +11,25 @@
       text-align: center;
       padding: 20px;
     }
+
     h1 {
       color: gold;
       margin-bottom: 30px;
       text-shadow: 0 0 10px gold;
     }
+
+    .container-duas-colunas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .coluna {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
     .botao-estilo {
       padding: 14px 20px;
       font-size: 16px;
@@ -28,65 +41,76 @@
       box-shadow: 0 0 8px gold;
       cursor: pointer;
       transition: all 0.3s ease;
-      width: 280px;
+      width: 100%;
       margin: 10px auto;
       display: block;
     }
+
     .botao-estilo:hover {
       background: gold;
       color: black;
       box-shadow: 0 0 20px gold;
     }
+
     a {
       text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container-duas-colunas {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
   <h1>MPB</h1>
-  <div class="container-vertical">
+  <div class="container-duas-colunas">
     <div class="coluna">
-  <a href="mpb/alceu.html"><button class="botao-estilo">Alceu</button></a>
-<a href="mpb/ana-carolina.html"><button class="botao-estilo">Ana Carolina</button></a>
-<a href="mpb/ana-vilela.html"><button class="botao-estilo">Ana Vilela</button></a>
-<a href="mpb/belchior.html"><button class="botao-estilo">Belchior</button></a>
-<a href="mpb/biquini-cavadao.html"><button class="botao-estilo">Biquini Cavadão</button></a>
-<a href="mpb/cazuza.html"><button class="botao-estilo">Cazuza</button></a>
-<a href="mpb/cidade-negra.html"><button class="botao-estilo">Cidade Negra</button></a>
-<a href="mpb/cassia-eller.html"><button class="botao-estilo">Cássia Eller</button></a>
-<a href="mpb/djavan.html"><button class="botao-estilo">Djavan</button></a>
-<a href="mpb/engenheiros-do-havai.html"><button class="botao-estilo">Engenheiros do Havai</button></a>
-<a href="mpb/fagner.html"><button class="botao-estilo">Fagner</button></a>
-<a href="mpb/gilberto-gil.html"><button class="botao-estilo">Gilberto Gil</button></a>
-<a href="mpb/j-quest.html"><button class="botao-estilo">J Quest</button></a>
-<a href="mpb/jorge-benjor.html"><button class="botao-estilo">Jorge Benjor</button></a>
-<a href="mpb/kell-smith.html"><button class="botao-estilo">Kell Smith</button></a>
-<a href="mpb/legiao-urbana.html"><button class="botao-estilo">Legião Urbana</button></a>
-<a href="mpb/lulu-santos.html"><button class="botao-estilo">Lulu Santos</button></a>
-<a href="mpb/mamonas-assassinas.html"><button class="botao-estilo">Mamonas Assassinas</button></a>
-  </div>
-    <div class="coluna">
-<a href="mpb/milton-nascimento.html"><button class="botao-estilo">Milton Nascimento</button></a>
-<a href="mpb/paralamas-do-sucesso.html"><button class="botao-estilo">Paralamas do Sucesso</button></a>
-<a href="mpb/paulo-ricardo.html"><button class="botao-estilo">Paulo Ricardo</button></a>
-<a href="mpb/peninha.html"><button class="botao-estilo">Peninha</button></a>
-<a href="mpb/raul-seixas.html"><button class="botao-estilo">Raul Seixas</button></a>
-<a href="mpb/regae.html"><button class="botao-estilo">Regae</button></a>
-<a href="mpb/renato-e-seus-blue-caps.html"><button class="botao-estilo">Renato e Seus Blue Caps</button></a>
-<a href="mpb/roberto-carlos.html"><button class="botao-estilo">Roberto Carlos</button></a>
-<a href="mpb/robinson-monteiro.html"><button class="botao-estilo">Robinson Monteiro</button></a>
-<a href="mpb/rock.html"><button class="botao-estilo">Rock</button></a>
-<a href="mpb/rosana.html"><button class="botao-estilo">Rosana</button></a>
-<a href="mpb/roupa-nova.html"><button class="botao-estilo">Roupa Nova</button></a>
-<a href="mpb/sandra-de-sa.html"><button class="botao-estilo">Sandra de Sá</button></a>
-<a href="mpb/seu-jorge.html"><button class="botao-estilo">Seu Jorge</button></a>
-<a href="mpb/skank.html"><button class="botao-estilo">Skank</button></a>
-<a href="mpb/the-fevers.html"><button class="botao-estilo">The Fevers</button></a>
-<a href="mpb/tim-maia.html"><button class="botao-estilo">Tim Maia</button></a>
-<a href="mpb/vitor-kley.html"><button class="botao-estilo">Vitor Kley</button></a>
-<a href="mpb/wando.html"><button class="botao-estilo">Wando</button></a>
-<a href="mpb/yahoo.html"><button class="botao-estilo">Yahoo</button></a>
-<a href="mpb/ze-ramalho.html"><button class="botao-estilo">Zé Ramalho</button></a>
+      <a href="mpb/alceu.html"><button class="botao-estilo">Alceu</button></a>
+      <a href="mpb/ana-carolina.html"><button class="botao-estilo">Ana Carolina</button></a>
+      <a href="mpb/ana-vilela.html"><button class="botao-estilo">Ana Vilela</button></a>
+      <a href="mpb/belchior.html"><button class="botao-estilo">Belchior</button></a>
+      <a href="mpb/biquini-cavadao.html"><button class="botao-estilo">Biquini Cavadão</button></a>
+      <a href="mpb/cazuza.html"><button class="botao-estilo">Cazuza</button></a>
+      <a href="mpb/cidade-negra.html"><button class="botao-estilo">Cidade Negra</button></a>
+      <a href="mpb/cassia-eller.html"><button class="botao-estilo">Cássia Eller</button></a>
+      <a href="mpb/djavan.html"><button class="botao-estilo">Djavan</button></a>
+      <a href="mpb/engenheiros-do-havai.html"><button class="botao-estilo">Engenheiros do Havai</button></a>
+      <a href="mpb/fagner.html"><button class="botao-estilo">Fagner</button></a>
+      <a href="mpb/gilberto-gil.html"><button class="botao-estilo">Gilberto Gil</button></a>
+      <a href="mpb/j-quest.html"><button class="botao-estilo">J Quest</button></a>
+      <a href="mpb/jorge-benjor.html"><button class="botao-estilo">Jorge Benjor</button></a>
+      <a href="mpb/kell-smith.html"><button class="botao-estilo">Kell Smith</button></a>
+      <a href="mpb/legiao-urbana.html"><button class="botao-estilo">Legião Urbana</button></a>
+      <a href="mpb/lulu-santos.html"><button class="botao-estilo">Lulu Santos</button></a>
+      <a href="mpb/mamonas-assassinas.html"><button class="botao-estilo">Mamonas Assassinas</button></a>
+    </div>
 
+    <div class="coluna">
+      <a href="mpb/milton-nascimento.html"><button class="botao-estilo">Milton Nascimento</button></a>
+      <a href="mpb/paralamas-do-sucesso.html"><button class="botao-estilo">Paralamas do Sucesso</button></a>
+      <a href="mpb/paulo-ricardo.html"><button class="botao-estilo">Paulo Ricardo</button></a>
+      <a href="mpb/peninha.html"><button class="botao-estilo">Peninha</button></a>
+      <a href="mpb/raul-seixas.html"><button class="botao-estilo">Raul Seixas</button></a>
+      <a href="mpb/regae.html"><button class="botao-estilo">Regae</button></a>
+      <a href="mpb/renato-e-seus-blue-caps.html"><button class="botao-estilo">Renato e Seus Blue Caps</button></a>
+      <a href="mpb/roberto-carlos.html"><button class="botao-estilo">Roberto Carlos</button></a>
+      <a href="mpb/robinson-monteiro.html"><button class="botao-estilo">Robinson Monteiro</button></a>
+      <a href="mpb/rock.html"><button class="botao-estilo">Rock</button></a>
+      <a href="mpb/rosana.html"><button class="botao-estilo">Rosana</button></a>
+      <a href="mpb/roupa-nova.html"><button class="botao-estilo">Roupa Nova</button></a>
+      <a href="mpb/sandra-de-sa.html"><button class="botao-estilo">Sandra de Sá</button></a>
+      <a href="mpb/seu-jorge.html"><button class="botao-estilo">Seu Jorge</button></a>
+      <a href="mpb/skank.html"><button class="botao-estilo">Skank</button></a>
+      <a href="mpb/the-fevers.html"><button class="botao-estilo">The Fevers</button></a>
+      <a href="mpb/tim-maia.html"><button class="botao-estilo">Tim Maia</button></a>
+      <a href="mpb/vitor-kley.html"><button class="botao-estilo">Vitor Kley</button></a>
+      <a href="mpb/wando.html"><button class="botao-estilo">Wando</button></a>
+      <a href="mpb/yahoo.html"><button class="botao-estilo">Yahoo</button></a>
+      <a href="mpb/ze-ramalho.html"><button class="botao-estilo">Zé Ramalho</button></a>
+    </div>
+  </div>
 </body>
 </html>
