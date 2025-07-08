@@ -1,71 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cantores Sertanejo</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-
-    h1 {
-      text-align: center;
-      color: gold;
-      text-shadow: 2px 2px 5px #000;
-      margin: 30px 0 10px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px;
-      gap: 15px;
-    }
-
-    .botao {
-      padding: 12px 20px;
-      font-size: 16px;
-      border: 2px solid gold;
-      border-radius: 20px;
-      background-color: transparent;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-      text-align: center;
-      min-width: 160px;
-      flex: 1 1 200px; /* Responsivo */
-      max-width: 250px;
-      box-shadow: 0 0 8px gold;
-    }
-
-    .botao:hover {
-      background-color: gold;
-      color: black;
-      box-shadow: 0 0 12px gold;
-    }
-
-    @media (max-width: 480px) {
-      .botao {
-        font-size: 14px;
-        padding: 10px;
-        min-width: 140px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>Sertanejo Universitário</h1>
-  <div class="container">
-    <button class="botao">Bruno e Marrone</button>
-    <button class="botao">Jorge e Mateus</button>
-    <button class="botao">Trio Parada Dura</button>
-    <button class="botao">Edson e Hudson</button>
-    <!-- Adicione mais botões aqui -->
-  </div>
-</body>
-</html>
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+.logo {
+  max-width: 400px;
+  margin: 20px auto;
+}
+h1, h2 {
+  color: #fff;
+}
+.carrossel a, .botoes-pagamento a, .botao {
+  display: block;
+  background-color: #111;
+  border: 2px solid gold;
+  color: white;
+  padding: 12px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 12px gold;
+  transition: 0.3s;
+}
+.botao:hover {
+  background-color: gold;
+  color: black;
+}
+.botao-pix {
+  background-color: #222;
+  border: 2px solid gold;
+  box-shadow: 0 0 10px gold;
+}
+.botao-whatsapp {
+  background-color: #25d366;
+  border: 2px solid #1ebe57;
+  color: black;
+  box-shadow: 0 0 10px #1ebe57;
+}
+main { min-height: 400px; }
+footer { text-align: center; }
