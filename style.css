@@ -26,6 +26,7 @@ h1, h2 {
   box-shadow: 0 0 12px gold;
   transition: 0.3s;
 }
+
 .botao:hover {
   background-color: gold;
   color: black;
