@@ -5,6 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abel e Caim</title>
   <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 30px auto;
+    }
+
+    .musica {
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    label {
+      margin-left: 8px;
+      font-size: 1em;
+    }
+
+    .botao-whatsapp {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+      box-shadow: 0 0 10px gold;
+      transition: all 0.3s ease;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,16 +88,27 @@
   </header>
 
   <main>
-    <form>
-      <label><input type="checkbox"> Abel e Caim - Mãe Amorosa</label><br>
-      <label><input type="checkbox"> Abel e Caim - Natureza</label><br>
-      <label><input type="checkbox"> Aguarde mais músicas</label><br>
+    <form class="caixa" id="caixa-musicas">
+      <div class="musica">
+        <input type="checkbox" id="musica1" name="musicas" value="Abel e Caim - Mãe Amorosa">
+        <label for="musica1">Abel e Caim - Mãe Amorosa</label>
+      </div>
+      <div class="musica">
+        <input type="checkbox" id="musica2" name="musicas" value="Abel e Caim - Natureza">
+        <label for="musica2">Abel e Caim - Natureza</label>
+      </div>
+      <div class="musica">
+        <input type="checkbox" id="musica3" name="musicas" value="Aguarde mais músicas">
+        <label for="musica3">Aguarde mais músicas</label>
+      </div>
+
       <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista para WhatsApp</button>
     </form>
   </main>
 
   <footer>
-    <p style="color: #ccc;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <a href="../index.html">← Voltar para Sertanejo</a>
+    <p>&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
   </footer>
 
   <script>
@@ -31,7 +117,7 @@
       let musicasSelecionadas = [];
       checkboxes.forEach(cb => {
         if (cb.checked) {
-          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
+          musicasSelecionadas.push(cb.value);
         }
       });
       if (musicasSelecionadas.length === 0) {
