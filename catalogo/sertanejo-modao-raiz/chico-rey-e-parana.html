@@ -2,27 +2,84 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chico Rey e Paraná</title>
   <link rel="stylesheet" href="../../style.css">
-  <script>
-    function enviarParaWhatsApp() {
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-      let musicasSelecionadas = [];
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          musicasSelecionadas.push(cb.value);
-        }
-      });
-      if (musicasSelecionadas.length === 0) {
-        alert('Por favor, selecione ao menos uma música.');
-        return;
-      }
-      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
-        musicasSelecionadas.map(m => "- " + m).join("\n");
-      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
-      window.open(url, '_blank');
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
     }
-  </script>
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 30px auto;
+    }
+
+    .musica {
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    label {
+      margin-left: 8px;
+      font-size: 1em;
+    }
+
+    .botao-whatsapp {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+      box-shadow: 0 0 10px gold;
+      transition: all 0.3s ease;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -57,7 +114,27 @@
 
   <footer>
     <a href="../index.html">← Voltar para Sertanejo</a>
-    <p style="color: #ccc;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p>&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    function enviarParaWhatsApp() {
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+      let musicasSelecionadas = [];
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          musicasSelecionadas.push(cb.value);
+        }
+      });
+      if (musicasSelecionadas.length === 0) {
+        alert('Por favor, selecione ao menos uma música.');
+        return;
+      }
+      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
+        musicasSelecionadas.map(m => "- " + m).join("\n");
+      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
