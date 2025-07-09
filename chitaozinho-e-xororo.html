@@ -6,29 +6,30 @@
   <title>Chitãozinho e Xororó</title>
   <link rel="stylesheet" href="../../style.css">
   <style>
-    .caixa {
-      background-color: #1a1a1a;
-      border: 2px solid gold;
-      border-radius: 12px;
-      padding: 25px;
-      max-width: 600px;
-      margin: 40px auto;
-      color: white;
-      font-size: 1.1em;
-      box-shadow: 0 0 15px gold;
-      text-align: left;
-    }
+  .caixa {
+    background-color: #1a1a1a;
+    border: 2px solid gold;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 40px auto;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 0 0 15px gold;
+    text-align: left; /* Garante que o conteúdo fique à esquerda */
+  }
 
-    .musica {
-      margin-bottom: 10px;
-    }
+  .musica {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
-    .musica input[type="checkbox"] {
-      margin-right: 8px;
-    }
-  </style>
-</head>
-<body>
+  .musica input[type="checkbox"] {
+    margin-right: 8px;
+  }
+</style>
+
   <header>
     <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
     <h1>Chitãozinho e Xororó</h1>
