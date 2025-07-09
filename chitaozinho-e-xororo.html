@@ -6,7 +6,7 @@
   <title>Chitãozinho e Xororó</title>
   <link rel="stylesheet" href="../../style.css">
   <style>
-    .caixa-musicas {
+    .caixa {
       background-color: #1a1a1a;
       border: 2px solid gold;
       border-radius: 12px;
@@ -16,22 +16,77 @@
       color: white;
       font-size: 1.1em;
       box-shadow: 0 0 15px gold;
-      text-align: left; /* Este comando alinha o conteúdo à esquerda */
+      text-align: left;
     }
 
-    .caixa-musicas label {
-      display: block;
-      margin-bottom: 8px;
-      cursor: pointer;
+    .musica {
+      margin-bottom: 10px;
+    }
+
+    .musica input[type="checkbox"] {
+      margin-right: 8px;
     }
   </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Chitãozinho e Xororó</h1>
+  </header>
+
+  <main>
+    <form class="caixa" id="caixa-musicas">
+      <div class="musica"><input type="checkbox" value="60 Dias Apaixonado"> 60 Dias Apaixonado</div>
+      <div class="musica"><input type="checkbox" value="A mais bonita das noites"> A mais bonita das noites</div>
+      <div class="musica"><input type="checkbox" value="Adeus solidão"> Adeus solidão</div>
+      <div class="musica"><input type="checkbox" value="Aguenta coração"> Aguenta coração</div>
+      <div class="musica"><input type="checkbox" value="Alo"> Alo</div>
+      <div class="musica"><input type="checkbox" value="Amante amada"> Amante amada</div>
+      <div class="musica"><input type="checkbox" value="Amor a três"> Amor a três</div>
+      <div class="musica"><input type="checkbox" value="Arrasta Uma Cadeira"> Arrasta Uma Cadeira</div>
+      <div class="musica"><input type="checkbox" value="Ave maria"> Ave maria</div>
+      <div class="musica"><input type="checkbox" value="Berrante de ouro"> Berrante de ouro</div>
+      <div class="musica"><input type="checkbox" value="Brigas de amor"> Brigas de amor</div>
+      <div class="musica"><input type="checkbox" value="Brincar de Ser Feliz"> Brincar de Ser Feliz</div>
+      <div class="musica"><input type="checkbox" value="Caipira"> Caipira</div>
+      <div class="musica"><input type="checkbox" value="Cheia de charme"> Cheia de charme</div>
+      <div class="musica"><input type="checkbox" value="Cheiro de relva"> Cheiro de relva</div>
+      <div class="musica"><input type="checkbox" value="Choro apaixonado"> Choro apaixonado</div>
+      <div class="musica"><input type="checkbox" value="Colcha de Retalhos"> Colcha de Retalhos</div>
+      <div class="musica"><input type="checkbox" value="Deixei de ser cowboy por ela"> Deixei de ser cowboy por ela</div>
+      <div class="musica"><input type="checkbox" value="Evidências"> Evidências</div>
+      <div class="musica"><input type="checkbox" value="Fogão de Lenha"> Fogão de Lenha</div>
+      <div class="musica"><input type="checkbox" value="Fio de cabelo"> Fio de cabelo</div>
+      <div class="musica"><input type="checkbox" value="Majestade o sabiá"> Majestade o sabiá</div>
+      <div class="musica"><input type="checkbox" value="Meu disfarce"> Meu disfarce</div>
+      <div class="musica"><input type="checkbox" value="Nascemos pra cantar"> Nascemos pra cantar</div>
+      <div class="musica"><input type="checkbox" value="No rancho fundo"> No rancho fundo</div>
+      <div class="musica"><input type="checkbox" value="Nuvem de lágrimas"> Nuvem de lágrimas</div>
+      <div class="musica"><input type="checkbox" value="Página de amigos"> Página de amigos</div>
+      <div class="musica"><input type="checkbox" value="Pombinha branca"> Pombinha branca</div>
+      <div class="musica"><input type="checkbox" value="Planeta azul"> Planeta azul</div>
+      <div class="musica"><input type="checkbox" value="Se Deus me ouvisse"> Se Deus me ouvisse</div>
+      <div class="musica"><input type="checkbox" value="Sinônimos"> Sinônimos</div>
+      <div class="musica"><input type="checkbox" value="Viola enluarada"> Viola enluarada</div>
+      <div class="musica"><input type="checkbox" value="Você vai ver"> Você vai ver</div>
+
+      <br>
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista para WhatsApp</button>
+    </form>
+  </main>
+
+  <footer>
+    <a href="../index.html" class="botao">← Voltar para Sertanejo</a>
+    <p style="color: #ccc;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+  </footer>
+
   <script>
     function enviarParaWhatsApp() {
       const checkboxes = document.querySelectorAll('input[type=checkbox]');
       let musicasSelecionadas = [];
       checkboxes.forEach(cb => {
         if (cb.checked) {
-          musicasSelecionadas.push(cb.nextSibling.textContent.trim());
+          musicasSelecionadas.push(cb.value || cb.nextSibling.textContent.trim());
         }
       });
       if (musicasSelecionadas.length === 0) {
@@ -44,60 +99,5 @@
       window.open(url, '_blank');
     }
   </script>
-</head>
-<body>
-  <header>
-    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
-    <h1>Chitãozinho e Xororó</h1>
-  </header>
-
-  <main>
-    <section class="caixa-musicas">
-      <form>
-        <label><input type="checkbox"> 60 Dias Apaixonado</label>
-        <label><input type="checkbox"> A mais bonita das noites</label>
-        <label><input type="checkbox"> Adeus solidão</label>
-        <label><input type="checkbox"> Aguenta coração</label>
-        <label><input type="checkbox"> Alo</label>
-        <label><input type="checkbox"> Amante amada</label>
-        <label><input type="checkbox"> Amor a três</label>
-        <label><input type="checkbox"> Aqui_o_Sistema_e_Bruto</label>
-        <label><input type="checkbox"> Arrasta Uma Cadeira</label>
-        <label><input type="checkbox"> Ave maria</label>
-        <label><input type="checkbox"> Berrante de ouro</label>
-        <label><input type="checkbox"> Brigas de amor</label>
-        <label><input type="checkbox"> Brincar de Ser Feliz</label>
-        <label><input type="checkbox"> Caipira</label>
-        <label><input type="checkbox"> Cheia de charme</label>
-        <label><input type="checkbox"> Cheiro de relva</label>
-        <label><input type="checkbox"> Choro apaixonado</label>
-        <label><input type="checkbox"> Colcha de Retalhos</label>
-        <label><input type="checkbox"> Coracao Sertanejo</label>
-        <label><input type="checkbox"> Deixei de ser cowboy por ela</label>
-        <label><input type="checkbox"> Evidências</label>
-        <label><input type="checkbox"> Fogão de Lenha</label>
-        <label><input type="checkbox"> Fio de cabelo</label>
-        <label><input type="checkbox"> Majestade o sabiá</label>
-        <label><input type="checkbox"> Meu disfarce</label>
-        <label><input type="checkbox"> Nascemos pra cantar</label>
-        <label><input type="checkbox"> No rancho fundo</label>
-        <label><input type="checkbox"> Nuvem de lágrimas</label>
-        <label><input type="checkbox"> Página de amigos</label>
-        <label><input type="checkbox"> Pombinha branca</label>
-        <label><input type="checkbox"> Planeta azul</label>
-        <label><input type="checkbox"> Se Deus me ouvisse</label>
-        <label><input type="checkbox"> Sinônimos</label>
-        <label><input type="checkbox"> Viola enluarada</label>
-        <label><input type="checkbox"> Você vai ver</label>
-        <br><br>
-        <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista para WhatsApp</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <a href="../index.html" class="botao">← Voltar para Sertanejo</a>
-    <p style="color: #ccc;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
 </body>
 </html>
