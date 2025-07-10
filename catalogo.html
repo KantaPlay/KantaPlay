@@ -32,29 +32,48 @@
       margin-bottom: 30px;
     }
 
-    .botao {
-      display: inline-block;
-      margin: 10px 10px;
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      background-color: transparent;
-      border: 2px solid gold;
-      border-radius: 10px;
-      box-shadow: 0 0 10px gold;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    .caixa {
+      border: 3px solid gold;
+      border-radius: 20px;
+      padding: 40px 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      box-shadow: 0 0 25px gold;
     }
 
-    .botao:hover {
-      background-color: gold;
+    .container-vertical {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .coluna {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .botao-estilo {
+      padding: 16px 22px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid gold;
+      color: white;
+      background: transparent;
+      border-radius: 14px;
+      box-shadow: 0 0 12px gold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 300px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .botao-estilo:hover {
+      background: gold;
       color: black;
       box-shadow: 0 0 20px gold;
-    }
-
-    main {
-      padding: 40px 20px;
     }
 
     footer {
@@ -72,27 +91,44 @@
       font-size: 0.9em;
       color: #ccc;
     }
+
+    @media (max-width: 768px) {
+      .container-vertical {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .botao-estilo {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo KantaPlay" class="logo">
     <h2>Catálogo Completo de Playbacks</h2>
-    <a href="sertanejo-modao-raiz.html" class="botao">💃 Sertanejo Modão Raiz</a>
-    <a href="sertanejo-universitario.html" class="botao">🎤 Sertanejo Universitário</a>
-    <a href="arrocha.html" class="botao">💃 Arrocha</a>
-    <a href="brega.html" class="botao">🎤 Brega</a>
-    <a href="mpb.html" class="botao">🎼 MPB</a>
-    <a href="forro.html" class="botao">🎼 Forró</a>
-    <a href="forro-sertanejo.html" class="botao">🎼 Forró Sertanejo</a>
-    <a href="gospel.html" class="botao">🎼 Gospel</a>
-    <a href="samba-e-pagode.html" class="botao">🎷 Samba e Pagode</a>
   </header>
 
   <main>
-    <p style="font-size: 1.1em; color: #ccc;">
-      Clique no estilo musical para acessar os artistas e selecionar suas músicas favoritas. 🎧
-    </p>
+    <div class="caixa">
+      <div class="container-vertical">
+        <div class="coluna">
+          <a class="botao-estilo" href="sertanejo-modao-raiz.html">💃 Sertanejo Modão Raiz</a>
+          <a class="botao-estilo" href="sertanejo-universitario.html">🎤 Sertanejo Universitário</a>
+          <a class="botao-estilo" href="arrocha.html">💃 Arrocha</a>
+          <a class="botao-estilo" href="brega.html">🎤 Brega</a>
+          <a class="botao-estilo" href="mpb.html">🎼 MPB</a>
+        </div>
+        <div class="coluna">
+          <a class="botao-estilo" href="forro.html">🎼 Forró</a>
+          <a class="botao-estilo" href="forro-sertanejo.html">🎼 Forró Sertanejo</a>
+          <a class="botao-estilo" href="gospel.html">🎼 Gospel</a>
+          <a class="botao-estilo" href="samba-e-pagode.html">🎷 Samba e Pagode</a>
+          <a class="botao-estilo" href="catalogo-promocoes.html">🔥 Pacotes Promocionais</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
