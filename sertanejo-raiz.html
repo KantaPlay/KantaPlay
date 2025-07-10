@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacote Sertanejo Raiz</title>
   <link rel="stylesheet" href="style.css">
   <script>
@@ -27,28 +28,32 @@
     }
   </script>
 </head>
-<body>
-  <header>
-    <img src="logo.png" alt="Logo KantaPlay" class="logo">
-    <h2>Pacote Sertanejo Raiz - Escolha suas músicas</h2>
+<body style="background-color: #000; color: white; font-family: Arial, sans-serif;">
+
+  <header style="text-align: center; padding: 20px;">
+    <img src="logo.png" alt="Logo KantaPlay" class="logo" style="max-width: 400px; width: 90%; height: auto;">
+    <h1 style="color: gold; text-shadow: 0 0 10px gold;">Pacote Sertanejo Raiz</h1>
   </header>
-  <main style="min-height: 400px;">
-    <form id="form-musicas">
-      <label><input type="checkbox"> Trio Parada Dura - As Andorinhas</label><br>
-      <label><input type="checkbox"> Chico Rey & Paraná - Quem Será Seu Outro Amor</label><br>
-      <label><input type="checkbox"> Alan & Aladim - Lembranças</label><br>
-      <label><input type="checkbox"> Almir Rogério - Fuscão Preto</label><br>
-      <label><input type="checkbox"> Sérgio Reis - Panela Velha</label><br>
-      <label><input type="checkbox"> Tião Carreiro & Pardinho - Pagode em Brasília</label><br>
-      <label><input type="checkbox"> Trio Parada Dura - Blusa Vermelha</label><br>
-      <label><input type="checkbox"> Trio Parada Dura - Telefone Mudo</label><br>
-      <label><input type="checkbox"> João Mineiro & Marciano - Faz Mais Uma Vez Comigo</label><br>
-      <label><input type="checkbox"> Joaquim & Manuel - Boate Azul</label><br>
-      <br>
-      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
+
+  <main style="display: flex; justify-content: center;">
+    <form id="form-musicas" style="background-color: #111; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; width: 100%;">
+      <p style="margin-bottom: 20px;">Escolha suas músicas:</p>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Alan & Aladim - Lembranças</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Almir Rogério - Fuscão Preto</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Chico Rey & Paraná - Quem Será Seu Outro Amor</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Joaquim & Manuel - Boate Azul</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> João Mineiro & Marciano - Faz Mais Uma Vez Comigo</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Sérgio Reis - Panela Velha</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Tião Carreiro & Pardinho - Pagode em Brasília</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Trio Parada Dura - As Andorinhas</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Trio Parada Dura - Blusa Vermelha</label>
+      <label style="display: block; text-align: left; margin-bottom: 20px;"><input type="checkbox"> Trio Parada Dura - Telefone Mudo</label>
+
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp" style="padding: 12px 20px; background-color: gold; color: black; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">📲 Enviar seleção no WhatsApp</button>
     </form>
   </main>
-  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
+
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px; text-align: center;">
     <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
     <p style="color: #888; font-size: 0.8em;">
       <a href="https://www.instagram.com/kantaplay" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
