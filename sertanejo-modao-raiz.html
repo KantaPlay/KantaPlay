@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Cantores Sertanejo Raiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sertanejo Modão Raiz</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       background-color: #000;
@@ -12,70 +14,84 @@
       padding: 20px;
     }
 
-    h1 {
+    header img.logo {
+      max-width: 180px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
       color: gold;
-      margin-bottom: 30px;
       text-shadow: 0 0 10px gold;
+      margin-bottom: 30px;
     }
 
     .moldura {
       background-color: #111;
       border: 2px solid gold;
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 30px;
-      max-width: 900px;
-      margin: 0 auto;
-      box-shadow: 0 0 20px gold;
+      max-width: 600px;
+      margin: 30px auto;
     }
 
-    .container-vertical {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .coluna {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .botao-estilo {
-      padding: 18px 25px;
+    .botao {
+      display: block;
+      margin: 12px auto;
+      padding: 14px 24px;
       font-size: 18px;
       font-weight: bold;
-      border: 3px solid gold;
       color: white;
-      background: black;
-      border-radius: 16px;
-      box-shadow: 0 0 10px gold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 320px;
-      text-align: center;
+      background-color: black;
+      border: 2px solid gold;
+      border-radius: 12px;
       text-decoration: none;
+      box-shadow: 0 0 10px gold;
+      transition: all 0.3s ease;
+      max-width: 90%;
     }
 
-    .botao-estilo:hover {
-      background: gold;
+    .botao:hover {
+      background-color: gold;
       color: black;
       box-shadow: 0 0 25px gold;
     }
 
-    @media (max-width: 768px) {
-      .container-vertical {
-        flex-direction: column;
-        align-items: center;
+    footer {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: gold;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .botao {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Sertanejo Raiz</h1>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo" />
+    <h2>Sertanejo Modão Raiz</h2>
+  </header>
 
-  <div class="moldura">
-    <div class="container-vertical">
+  <main>
+    <div class="moldura">
+      <p style="color: white; font-size: 1em; margin-bottom: 20px;">
+        Escolha o artista do estilo modão raiz e veja os playbacks disponíveis. 🎶
+      </p>
+      <div class="container-vertical">
       <div class="coluna">
         <a class="botao-estilo" href="catalogo/sertanejo-modao-raiz/abel-e-caim.html">Abel E Caim</a>
         <a class="botao-estilo" href="catalogo/sertanejo-modao-raiz/alan-e-aladim.html">Alan E Aladim</a>
@@ -105,8 +121,16 @@
         <a class="botao-estilo" href="catalogo/sertanejo-modao-raiz/teodoro-e-sampaio.html">Teodoro E Sampaio</a>
         <a class="botao-estilo" href="catalogo/sertanejo-modao-raiz/trio-parada-dura.html">Trio Parada Dura</a>
         <a class="botao-estilo" href="catalogo/sertanejo-modao-raiz/zeze-di-camargo-e-luciano.html">Zezé Di Camargo E Luciano</a>
-      </div>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p>
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank">Instagram</a> |
+      <a href="#">Termos de Uso</a> |
+      <a href="#">Política de Privacidade</a>
+    </p>
+  </footer>
 </body>
 </html>
