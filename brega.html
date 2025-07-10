@@ -1,9 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brega</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       background-color: #000;
@@ -12,48 +13,88 @@
       text-align: center;
       padding: 20px;
     }
+
     h1 {
       color: gold;
-      margin-bottom: 30px;
       text-shadow: 0 0 10px gold;
+      margin-bottom: 30px;
     }
-    .botao-estilo {
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
+
+    .moldura {
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px gold;
+      background-color: #111;
+    }
+
+    .botoes-colunas {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .botao-cantor {
+      flex: 1 1 calc(50% - 20px);
+      background: black;
       border: 2px solid gold;
       color: white;
-      background: black;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
       border-radius: 12px;
-      box-shadow: 0 0 8px gold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 280px;
-      margin: 10px auto;
+      box-shadow: 0 0 10px gold;
+      transition: 0.3s;
+      text-decoration: none;
       display: block;
     }
-    .botao-estilo:hover {
-      background: gold;
+
+    .botao-cantor:hover {
+      background-color: gold;
       color: black;
       box-shadow: 0 0 20px gold;
     }
-    a {
-      text-decoration: none;
+
+    @media (max-width: 600px) {
+      .botao-cantor {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Brega</h1>
-  <a href="brega/agnaldo-timoteo.html"><button class="botao-estilo">Agnaldo Timoteo</button></a>
-<a href="brega/amado-batista.html"><button class="botao-estilo">Amado Batista</button></a>
-<a href="brega/antonio-marcos.html"><button class="botao-estilo">Antonio Marcos</button></a>
-<a href="brega/barto-galeno.html"><button class="botao-estilo">Bartô Galeno</button></a>
-<a href="brega/lindomar-castilho.html"><button class="botao-estilo">Lindomar Castilho</button></a>
-<a href="brega/marcelo-reis.html"><button class="botao-estilo">Marcelo Reis</button></a>
-<a href="brega/nelson-ned.html"><button class="botao-estilo">Nelson Ned</button></a>
-<a href="brega/odair-jose.html"><button class="botao-estilo">Odair José</button></a>
-<a href="brega/paulo-sergio.html"><button class="botao-estilo">Paulo Sérgio</button></a>
-<a href="brega/waldik-soriano.html"><button class="botao-estilo">Waldik Soriano</button></a>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Brega</h1>
+  </header>
 
+  <main>
+    <div class="moldura">
+      <div class="botoes-colunas">
+        <a href="brega/agnaldo-timoteo.html" class="botao-cantor">Agnaldo Timoteo</a>
+        <a href="brega/amado-batista.html" class="botao-cantor">Amado Batista</a>
+        <a href="brega/antonio-marcos.html" class="botao-cantor">Antonio Marcos</a>
+        <a href="brega/barto-galeno.html" class="botao-cantor">Bartô Galeno</a>
+        <a href="brega/lindomar-castilho.html" class="botao-cantor">Lindomar Castilho</a>
+        <a href="brega/marcelo-reis.html" class="botao-cantor">Marcelo Reis</a>
+        <a href="brega/nelson-ned.html" class="botao-cantor">Nelson Ned</a>
+        <a href="brega/odair-jose.html" class="botao-cantor">Odair José</a>
+        <a href="brega/paulo-sergio.html" class="botao-cantor">Paulo Sérgio</a>
+        <a href="brega/waldik-soriano.html" class="botao-cantor">Waldik Soriano</a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
+    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p style="color: #888; font-size: 0.8em;">
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
+    </p>
+  </footer>
 </body>
 </html>
