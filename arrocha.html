@@ -1,53 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arrocha</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       background-color: #000;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
     }
 
     h1 {
       color: gold;
-      margin-bottom: 30px;
       text-shadow: 0 0 10px gold;
+      margin-bottom: 30px;
+    }
+
+    .moldura {
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px gold;
+      background-color: #111;
+    }
+
+    .botoes-colunas {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .botao-cantor {
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
+      flex: 1 1 calc(50% - 20px);
+      background: black;
       border: 2px solid gold;
       color: white;
-      background: black;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
       border-radius: 12px;
-      box-shadow: 0 0 8px gold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 500px;
-      margin: 10px auto;
+      box-shadow: 0 0 10px gold;
+      transition: 0.3s;
+      text-decoration: none;
       display: block;
     }
 
     .botao-cantor:hover {
-      background: gold;
+      background-color: gold;
       color: black;
       box-shadow: 0 0 20px gold;
     }
 
-    a {
-      text-decoration: none;
+    @media (max-width: 600px) {
+      .botao-cantor {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Arrocha</h1>
-  <a href="pablo.html"><button class="botao-cantor">Pablo</button></a>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Arrocha</h1>
+  </header>
+
+  <main>
+    <div class="moldura">
+      <div class="botoes-colunas">
+        <a href="catalogo/arrocha/pablo.html" class="botao-cantor">Pablo</a>
+        <!-- Adicione outros cantores aqui no mesmo formato -->
+      </div>
+    </div>
+  </main>
+
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
+    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p style="color: #888; font-size: 0.8em;">
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
+    </p>
+  </footer>
 </body>
 </html>
