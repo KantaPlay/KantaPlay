@@ -2,60 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacote 10 Playbacks por R$ 20</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f5;
-      margin: 0;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .container {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-      max-width: 1000px;
-      width: 100%;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-
-    label {
-      font-size: 20px;
-      display: block;
-      margin-bottom: 14px;
-    }
-
-    input[type="checkbox"] {
-      transform: scale(1.5);
-      margin-right: 12px;
-    }
-
-    .botao-whatsapp {
-      background-color: #25D366;
-      color: white;
-      padding: 16px 32px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s;
-    }
-
-    .botao-whatsapp:hover {
-      transform: scale(1.05);
-    }
-  </style>
   <script>
     function enviarParaWhatsApp() {
       const checkboxes = document.querySelectorAll('input[type=checkbox]');
@@ -79,31 +28,26 @@
     }
   </script>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <img src="logo.png" alt="Logo KantaPlay" class="logo">
-      <h2>Escolha quantas músicas quiser</h2>
-    </header>
-    <main style="min-height: 400px;">
-      <form id="form-musicas">
-      <label><input type="checkbox"> A Hora E Agora - Jorge & Mateus</label><br>
-      <label><input type="checkbox"> Alguem No Seu Lugar Jorge E Matheus</label><br>
-      <label><input type="checkbox"> Amo Noite Dia Misterios Se Eu Pedir Volta</label><br>
-      
-        <br>
-        <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar seleção no WhatsApp</button>
-      </form>
-    </main>
-    <footer style="background-color: #111; padding: 20px; margin-top: 40px; text-align: center;">
-      <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-      <p style="color: #888; font-size: 0.8em;">
-        <a href="https://www.instagram.com/kantaplay" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
-        <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
-        <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
-      </p>
-    </footer>
-  </div>
-</body>
-</html>
-  
+<body style="background-color: #000; color: white; font-family: Arial, sans-serif;">
+
+  <header style="text-align: center; padding: 20px;">
+    <img src="logo.png" alt="Logo KantaPlay" class="logo" style="max-width: 400px; width: 90%; height: auto;">
+    <h1 style="color: gold; text-shadow: 0 0 10px gold;">Pacote 10 Playbacks por R$ 20</h1>
+  </header>
+
+  <main style="display: flex; justify-content: center;">
+    <form id="form-musicas" style="background-color: #111; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; width: 100%;">
+      <p style="margin-bottom: 20px;">Escolha até 10 músicas:</p>
+
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> A Hora É Agora - Jorge & Mateus</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Alguém No Seu Lugar - Jorge & Mateus</label>
+      <label style="display: block; text-align: left; margin-bottom: 10px;"><input type="checkbox"> Amo Noite e Dia - Mistérios / Se Eu Pedir / Volta</label>
+
+      <br>
+      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp" style="padding: 12px 20px; background-color: gold; color: black; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">
+        📲 Enviar seleção no WhatsApp
+      </button>
+    </form>
+  </main>
+
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px; t
