@@ -2,115 +2,142 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Sertanejo Universitário</title>
-  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantores Sertanejo Universitário</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 40px;
-      background: black;
-      border: 4px solid gold;
-      border-radius: 20px;
-      box-shadow: 0 0 30px gold;
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      margin-bottom: 30px;
+    }
+
+    .moldura {
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px gold;
+      background-color: #111;
+    }
+
+    .botoes-colunas {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
     }
 
-    .botao-estilo {
-      display: block;
-      padding: 16px 24px;
-      font-size: 18px;
-      font-weight: bold;
+    .botao-cantor {
+      flex: 1 1 calc(50% - 20px);
+      background: black;
       border: 2px solid gold;
       color: white;
-      background: black;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
       border-radius: 12px;
-      box-shadow: 0 0 8px gold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 320px;
-      text-align: center;
+      box-shadow: 0 0 10px gold;
+      transition: 0.3s;
       text-decoration: none;
+      display: block;
     }
 
-    .botao-estilo:hover {
-      background: gold;
+    .botao-cantor:hover {
+      background-color: gold;
       color: black;
       box-shadow: 0 0 20px gold;
+    }
+
+    @media (max-width: 600px) {
+      .botao-cantor {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="../logo.png" alt="Logo KantaPlay" class="logo">
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
     <h1>Sertanejo Universitário</h1>
   </header>
 
   <main>
-    <div class="container">
-    <div class="coluna">
-    <a href="catalogo/sertanejo-universitario/alan-e-alex.html" class="botao-estilo">Alan E Alex</a>
-    <a href="catalogo/sertanejo-universitario/ataide-alexandre.html" class="botao-estilo">Ataide Alexandre</a>
-    <a href="catalogo/sertanejo-universitario/brenno-e-mateus.html"><button class="botao-estilo">Brenno E Mateus</button></a>
-<a href="catalogo/sertanejo-universitario/bruno-e-marrone.html"><button class="botao-estilo">Bruno E Marrone</button></a>
-<a href="catalogo/sertanejo-universitario/conrado-e-aleksandro.html"><button class="botao-estilo">Conrado E Aleksandro</button></a>
-<a href="catalogo/sertanejo-universitario/cristiano-araujo.html"><button class="botao-estilo">Cristiano Araujo</button></a>
-<a href="catalogo/sertanejo-universitario/daniel.html"><button class="botao-estilo">Daniel</button></a>
-<a href="catalogo/sertanejo-universitario/di-paulo-e-paulino.html"><button class="botao-estilo">Di Paulo E Paulino</button></a>
-<a href="catalogo/sertanejo-universitario/diego-e-vitor-hugo.html"><button class="botao-estilo">Diego E Vitor Hugo</button></a>
-<a href="catalogo/sertanejo-universitario/edson-e-hudson.html"><button class="botao-estilo">Edson E Hudson</button></a>
-<a href="catalogo/sertanejo-universitario/eduardo-costa.html"><button class="botao-estilo">Eduardo Costa</button></a>
-<a href="catalogo/sertanejo-universitario/edy-britto-e-samuel.html"><button class="botao-estilo">Edy Britto E Samuel</button></a>
-<a href="catalogo/sertanejo-universitario/felipe-araujo.html"><button class="botao-estilo">Felipe Araujo</button></a>
-<a href="catalogo/sertanejo-universitario/felipe-e-falcao.html"><button class="botao-estilo">Felipe E Falcao</button></a>
-<a href="catalogo/sertanejo-universitario/fernando-e-sorocaba.html"><button class="botao-estilo">Fernando E Sorocaba</button></a>
-<a href="catalogo/sertanejo-universitario/fred-e-gustavo.html"><button class="botao-estilo">Fred E Gustavo</button></a>
-<a href="catalogo/sertanejo-universitario/gian-e-giovani.html"><button class="botao-estilo">Gian E Giovani</button></a>
-<a href="catalogo/sertanejo-universitario/guilherme-e-benuto.html"><button class="botao-estilo">Guilherme E Benuto</button></a>
-<a href="catalogo/sertanejo-universitario/guilherme-e-santiago.html"><button class="botao-estilo">Guilherme E Santiago</button></a>
-<a href="catalogo/sertanejo-universitario/gustavo-lima.html"><button class="botao-estilo">Gustavo Lima</button></a>
-<a href="catalogo/sertanejo-universitario/henrique-e-juliano.html"><button class="botao-estilo">Henrique E Juliano</button></a>
-<a href="catalogo/sertanejo-universitario/henriques-e-diego.html"><button class="botao-estilo">Henriques E Diego</button></a>
-<a href="catalogo/sertanejo-universitario/hugo-e-guilherme.html"><button class="botao-estilo">Hugo E Guilherme</button></a>
-<a href="catalogo/sertanejo-universitario/hugo-e-tiago.html"><button class="botao-estilo">Hugo E Tiago</button></a>
-<a href="catalogo/sertanejo-universitario/hugo-pena-e-gabriel.html"><button class="botao-estilo">Hugo Pena E Gabriel</button></a>
-<a href="catalogo/sertanejo-universitario/humberto-e-ronaldo.html"><button class="botao-estilo">Humberto E Ronaldo</button></a>
+    <div class="moldura">
+      <div class="botoes-colunas">
+        <a href="catalogo/sertanejo-universitario/alan-e-alex.html" class="botao-cantor">Alan E Alex</a>
+        <a href="catalogo/sertanejo-universitario/ataide-alexandre.html" class="botao-cantor">Ataide Alexandre</a>
+        <a href="catalogo/sertanejo-universitario/brenno-e-mateus.html" class="botao-cantor">Brenno E Mateus</a>
+        <a href="catalogo/sertanejo-universitario/bruno-e-marrone.html" class="botao-cantor">Bruno E Marrone</a>
+        <a href="catalogo/sertanejo-universitario/conrado-e-aleksandro.html" class="botao-cantor">Conrado E Aleksandro</a>
+        <a href="catalogo/sertanejo-universitario/cristiano-araujo.html" class="botao-cantor">Cristiano Araujo</a>
+        <a href="catalogo/sertanejo-universitario/daniel.html" class="botao-cantor">Daniel</a>
+        <a href="catalogo/sertanejo-universitario/di-paulo-e-paulino.html" class="botao-cantor">Di Paulo E Paulino</a>
+        <a href="catalogo/sertanejo-universitario/diego-e-vitor-hugo.html" class="botao-cantor">Diego E Vitor Hugo</a>
+        <a href="catalogo/sertanejo-universitario/edson-e-hudson.html" class="botao-cantor">Edson E Hudson</a>
+        <a href="catalogo/sertanejo-universitario/eduardo-costa.html" class="botao-cantor">Eduardo Costa</a>
+        <a href="catalogo/sertanejo-universitario/edy-britto-e-samuel.html" class="botao-cantor">Edy Britto E Samuel</a>
+        <a href="catalogo/sertanejo-universitario/felipe-araujo.html" class="botao-cantor">Felipe Araujo</a>
+        <a href="catalogo/sertanejo-universitario/felipe-e-falcao.html" class="botao-cantor">Felipe E Falcao</a>
+        <a href="catalogo/sertanejo-universitario/fernando-e-sorocaba.html" class="botao-cantor">Fernando E Sorocaba</a>
+        <a href="catalogo/sertanejo-universitario/fred-e-gustavo.html" class="botao-cantor">Fred E Gustavo</a>
+        <a href="catalogo/sertanejo-universitario/gian-e-giovani.html" class="botao-cantor">Gian E Giovani</a>
+        <a href="catalogo/sertanejo-universitario/guilherme-e-benuto.html" class="botao-cantor">Guilherme E Benuto</a>
+        <a href="catalogo/sertanejo-universitario/guilherme-e-santiago.html" class="botao-cantor">Guilherme E Santiago</a>
+        <a href="catalogo/sertanejo-universitario/gustavo-lima.html" class="botao-cantor">Gustavo Lima</a>
+        <a href="catalogo/sertanejo-universitario/henrique-e-juliano.html" class="botao-cantor">Henrique E Juliano</a>
+        <a href="catalogo/sertanejo-universitario/henriques-e-diego.html" class="botao-cantor">Henriques E Diego</a>
+        <a href="catalogo/sertanejo-universitario/hugo-e-guilherme.html" class="botao-cantor">Hugo E Guilherme</a>
+        <a href="catalogo/sertanejo-universitario/hugo-e-tiago.html" class="botao-cantor">Hugo E Tiago</a>
+        <a href="catalogo/sertanejo-universitario/hugo-pena-e-gabriel.html" class="botao-cantor">Hugo Pena E Gabriel</a>
+        <a href="catalogo/sertanejo-universitario/humberto-e-ronaldo.html" class="botao-cantor">Humberto E Ronaldo</a>
+        <a href="catalogo/sertanejo-universitario/jads-e-jadson.html" class="botao-cantor">Jads E Jadson</a>
+        <a href="catalogo/sertanejo-universitario/joao-bosco-e-vinicius.html" class="botao-cantor">Joao Bosco E Vinicius</a>
+        <a href="catalogo/sertanejo-universitario/joao-carreiro-e-capataz.html" class="botao-cantor">Joao Carreiro E Capataz</a>
+        <a href="catalogo/sertanejo-universitario/joao-neto-e-frederico.html" class="botao-cantor">Joao Neto E Frederico</a>
+        <a href="catalogo/sertanejo-universitario/joao-paulo-e-daniel.html" class="botao-cantor">Joao Paulo E Daniel</a>
+        <a href="catalogo/sertanejo-universitario/jorge-e-mateus.html" class="botao-cantor">Jorge E Mateus</a>
+        <a href="catalogo/sertanejo-universitario/lauana-prado.html" class="botao-cantor">Lauana Prado</a>
+        <a href="catalogo/sertanejo-universitario/leandro-e-leonardo.html" class="botao-cantor">Leandro E Leonardo</a>
+        <a href="catalogo/sertanejo-universitario/leonardo.html" class="botao-cantor">Leonardo</a>
+        <a href="catalogo/sertanejo-universitario/luan-santana.html" class="botao-cantor">Luan Santana</a>
+        <a href="catalogo/sertanejo-universitario/marcos-e-belutti.html" class="botao-cantor">Marcos E Belutti</a>
+        <a href="catalogo/sertanejo-universitario/maria-cecilia-e-rodolfo.html" class="botao-cantor">Maria Cecilia E Rodolfo</a>
+        <a href="catalogo/sertanejo-universitario/marilia-mendonca.html" class="botao-cantor">Marilia Mendonca</a>
+        <a href="catalogo/sertanejo-universitario/mateus-e-kauan.html" class="botao-cantor">Mateus E Kauan</a>
+        <a href="catalogo/sertanejo-universitario/mauricio-e-mauri.html" class="botao-cantor">Mauricio E Mauri</a>
+        <a href="catalogo/sertanejo-universitario/michel-telo.html" class="botao-cantor">Michel Telo</a>
+        <a href="catalogo/sertanejo-universitario/paula-fernandes.html" class="botao-cantor">Paula Fernandes</a>
+        <a href="catalogo/sertanejo-universitario/rena-e-ray.html" class="botao-cantor">Rena E Ray</a>
+        <a href="catalogo/sertanejo-universitario/rick-e-rener.html" class="botao-cantor">Rick E Rener</a>
+        <a href="catalogo/sertanejo-universitario/rio-negro-e-solimoes.html" class="botao-cantor">Rio Negro E Solimoes</a>
+        <a href="catalogo/sertanejo-universitario/simone-simaria.html" class="botao-cantor">Simone Simaria</a>
+        <a href="catalogo/sertanejo-universitario/thaeme-e-tiago.html" class="botao-cantor">Thaeme E Tiago</a>
+        <a href="catalogo/sertanejo-universitario/traia-veia.html" class="botao-cantor">Traia Veia</a>
+        <a href="catalogo/sertanejo-universitario/victor-e-leo.html" class="botao-cantor">Victor E Leo</a>
+        <a href="catalogo/sertanejo-universitario/ze-henrique-e-gabriel.html" class="botao-cantor">Ze Henrique E Gabriel</a>
+        <a href="catalogo/sertanejo-universitario/ze-neto-e-cristiano.html" class="botao-cantor">Ze Neto E Cristiano</a>
+        <a href="catalogo/sertanejo-universitario/zeze-di-camargo-e-luciano.html" class="botao-cantor">Zeze Di Camargo E Luciano</a>
+      </div>
     </div>
-    <div class="coluna">
-      <a href="catalogo/sertanejo-universitario/jads-e-jadson.html"><button class="botao-estilo">Jads E Jadson</button></a>
-<a href="catalogo/sertanejo-universitario/joao-bosco-e-vinicius.html"><button class="botao-estilo">Joao Bosco E Vinicius</button></a>
-<a href="catalogo/sertanejo-universitario/joao-carreiro-e-capataz.html"><button class="botao-estilo">Joao Carreiro E Capataz</button></a>
-<a href="catalogo/sertanejo-universitario/joao-neto-e-frederico.html"><button class="botao-estilo">Joao Neto E Frederico</button></a>
-<a href="catalogo/sertanejo-universitario/joao-paulo-e-daniel.html"><button class="botao-estilo">Joao Paulo E Daniel</button></a>
-<a href="catalogo/sertanejo-universitario/jorge-e-mateus.html"><button class="botao-estilo">Jorge E Mateus</button></a>
-<a href="catalogo/sertanejo-universitario/lauana-prado.html"><button class="botao-estilo">Lauana Prado</button></a>
-<a href="catalogo/sertanejo-universitario/leandro-e-leonardo.html"><button class="botao-estilo">Leandro E Leonardo</button></a>
-<a href="catalogo/sertanejo-universitario/leonardo.html"><button class="botao-estilo">Leonardo</button></a>
-<a href="catalogo/sertanejo-universitario/luan-santana.html"><button class="botao-estilo">Luan Santana</button></a>
-<a href="catalogo/sertanejo-universitario/marcos-e-belutti.html"><button class="botao-estilo">Marcos E Belutti</button></a>
-<a href="catalogo/sertanejo-universitario/maria-cecilia-e-rodolfo.html"><button class="botao-estilo">Maria Cecilia E Rodolfo</button></a>
-<a href="catalogo/sertanejo-universitario/marilia-mendonca.html"><button class="botao-estilo">Marilia Mendonca</button></a>
-<a href="catalogo/sertanejo-universitario/mateus-e-kauan.html"><button class="botao-estilo">Mateus E Kauan</button></a>
-<a href="catalogo/sertanejo-universitario/mauricio-e-mauri.html"><button class="botao-estilo">Mauricio E Mauri</button></a>
-<a href="catalogo/sertanejo-universitario/michel-telo.html"><button class="botao-estilo">Michel Telo</button></a>
-<a href="catalogo/sertanejo-universitario/paula-fernandes.html"><button class="botao-estilo">Paula Fernandes</button></a>
-<a href="catalogo/sertanejo-universitario/rena-e-ray.html"><button class="botao-estilo">Rena E Ray</button></a>
-<a href="catalogo/sertanejo-universitario/rick-e-rener.html"><button class="botao-estilo">Rick E Rener</button></a>
-<a href="catalogo/sertanejo-universitario/rio-negro-e-solimoes.html"><button class="botao-estilo">Rio Negro E Solimoes</button></a>
-<a href="catalogo/sertanejo-universitario/simone-simaria.html"><button class="botao-estilo">Simone Simaria</button></a>
-<a href="catalogo/sertanejo-universitario/thaeme-e-tiago.html"><button class="botao-estilo">Thaeme E Tiago</button></a>
-<a href="catalogo/sertanejo-universitario/traia-veia.html"><button class="botao-estilo">Traia Veia</button></a>
-<a href="catalogo/sertanejo-universitario/victor-e-leo.html"><button class="botao-estilo">Victor E Leo</button></a>
-<a href="catalogo/sertanejo-universitario/ze-henrique-e-gabriel.html"><button class="botao-estilo">Ze Henrique E Gabriel</button></a>
-<a href="catalogo/sertanejo-universitario/ze-neto-e-cristiano.html"><button class="botao-estilo">Ze Neto E Cristiano</button></a>
-<a href="catalogo/sertanejo-universitario/zeze-di-camargo-e-luciano.html"><button class="botao-estilo">Zeze Di Camargo E Luciano</button></a>
   </main>
 
-  <footer>
-    <p style="color: #ccc; font-size: 0.9em; text-align: center; margin-top: 40px;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
+    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p style="color: #888; font-size: 0.8em;">
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
+    </p>
   </footer>
 </body>
 </html>
