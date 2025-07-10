@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ataíde e Alexandre - Playbacks</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img.logo {
+      max-width: 180px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      margin-bottom: 20px;
+    }
+
+    .moldura {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px gold;
+    }
+
+    .musica {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    .botao-whatsapp {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #25D366;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #25D366;
+      transition: 0.3s;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #1ebd5a;
+      box-shadow: 0 0 15px #25D366;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p, footer a {
+      color: #ccc;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    footer a {
+      color: gold;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Ataíde e Alexandre</h1>
+  </header>
+
+  <main>
+    <div class="moldura">
+      <form id="form-musicas">
+        <div class="musica"><input type="checkbox" id="musica1" name="musicas" value="Comer comer"> <label for="musica1">Comer comer</label></div>
+        <div class="musica"><input type="checkbox" id="musica2" name="musicas" value="Deus me livre"> <label for="musica2">Deus me livre</label></div>
+        <div class="musica"><input type="checkbox" id="musica3" name="musicas" value="Só quero te dizer"> <label for="musica3">Só quero te dizer</label></div>
+        <div class="musica"><input type="checkbox" id="musica4" name="musicas" value="Você marcou pra mim"> <label for="musica4">Você marcou pra mim</label></div>
+
+        <a class="botao-whatsapp" href="https://wa.me/5511972330562?text=Olá,+quero+essas+músicas+do+Ataíde+e+Alexandre:+Comer+comer,+Deus+me+livre,+Só+quero+te+dizer,+Você+marcou+pra+mim" target="_blank">📲 Enviar no WhatsApp</a>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p>
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank">Instagram</a> |
+      <a href="#">Termos de Uso</a> |
+      <a href="#">Política de Privacidade</a>
+    </p>
+  </footer>
+</body>
+</html>
