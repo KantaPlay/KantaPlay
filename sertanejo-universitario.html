@@ -2,85 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Cantores Sertanejo Universitário</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sertanejo Universitário</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      margin: 0;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      color: gold;
-      text-shadow: 0 0 10px gold;
-      font-size: 2.5em;
-    }
-
-    .container {
+    main {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 40px;
+      background: black;
+      border: 4px solid gold;
+      border-radius: 20px;
+      box-shadow: 0 0 30px gold;
       display: flex;
-      justify-content: center;
-      gap: 60px;
       flex-wrap: wrap;
-    }
-
-    .coluna {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+      justify-content: center;
+      gap: 20px;
     }
 
     .botao-estilo {
+      display: block;
       padding: 16px 24px;
       font-size: 18px;
       font-weight: bold;
       border: 2px solid gold;
       color: white;
       background: black;
-      border-radius: 14px;
-      box-shadow: 0 0 10px gold;
+      border-radius: 12px;
+      box-shadow: 0 0 8px gold;
       cursor: pointer;
       transition: all 0.3s ease;
-      width: 300px;
+      width: 320px;
       text-align: center;
+      text-decoration: none;
     }
 
     .botao-estilo:hover {
       background: gold;
       color: black;
-      box-shadow: 0 0 25px gold;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
+      box-shadow: 0 0 20px gold;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="../logo.png" alt="Logo KantaPlay" class="logo">
     <h1>Sertanejo Universitário</h1>
   </header>
-  <div class="container">
+
+  <main>
+    <div class="container">
     <div class="coluna">
-       <a href="catalogo/sertanejo-universitario/alan-e-alex.html"><button class="botao-estilo">Alan E Alex</button></a>
-<a href="catalogo/sertanejo-universitario/ataide-alexandre.html"><button class="botao-estilo">Ataide Alexandre</button></a>
-<a href="catalogo/sertanejo-universitario/brenno-e-mateus.html"><button class="botao-estilo">Brenno E Mateus</button></a>
+    <a href="catalogo/sertanejo-universitario/alan-e-alex.html" class="botao-estilo">Alan E Alex</a>
+    <a href="catalogo/sertanejo-universitario/ataide-alexandre.html" class="botao-estilo">Ataide Alexandre</a>
+    <a href="catalogo/sertanejo-universitario/brenno-e-mateus.html"><button class="botao-estilo">Brenno E Mateus</button></a>
 <a href="catalogo/sertanejo-universitario/bruno-e-marrone.html"><button class="botao-estilo">Bruno E Marrone</button></a>
 <a href="catalogo/sertanejo-universitario/conrado-e-aleksandro.html"><button class="botao-estilo">Conrado E Aleksandro</button></a>
 <a href="catalogo/sertanejo-universitario/cristiano-araujo.html"><button class="botao-estilo">Cristiano Araujo</button></a>
@@ -133,7 +107,10 @@
 <a href="catalogo/sertanejo-universitario/ze-henrique-e-gabriel.html"><button class="botao-estilo">Ze Henrique E Gabriel</button></a>
 <a href="catalogo/sertanejo-universitario/ze-neto-e-cristiano.html"><button class="botao-estilo">Ze Neto E Cristiano</button></a>
 <a href="catalogo/sertanejo-universitario/zeze-di-camargo-e-luciano.html"><button class="botao-estilo">Zeze Di Camargo E Luciano</button></a>
-    </div>
-  </div>
+  </main>
+
+  <footer>
+    <p style="color: #ccc; font-size: 0.9em; text-align: center; margin-top: 40px;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
