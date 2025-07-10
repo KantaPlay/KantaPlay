@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MPB</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       background-color: #000;
@@ -14,103 +16,114 @@
 
     h1 {
       color: gold;
-      margin-bottom: 30px;
       text-shadow: 0 0 10px gold;
+      margin-bottom: 30px;
     }
 
-    .container-duas-colunas {
+    .moldura {
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px gold;
+      background-color: #111;
+    }
+
+    .botoes-colunas {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
     }
 
-    .coluna {
-      flex: 1 1 300px;
-      max-width: 400px;
-    }
-
-    .botao-estilo {
-      padding: 14px 20px;
-      font-size: 16px;
-      font-weight: bold;
+    .botao-cantor {
+      flex: 1 1 calc(50% - 20px);
+      background: black;
       border: 2px solid gold;
       color: white;
-      background: black;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
       border-radius: 12px;
-      box-shadow: 0 0 8px gold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-      margin: 10px auto;
+      box-shadow: 0 0 10px gold;
+      transition: 0.3s;
+      text-decoration: none;
       display: block;
     }
 
-    .botao-estilo:hover {
-      background: gold;
+    .botao-cantor:hover {
+      background-color: gold;
       color: black;
       box-shadow: 0 0 20px gold;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .container-duas-colunas {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 600px) {
+      .botao-cantor {
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
-  <h1>MPB</h1>
-  <div class="container-duas-colunas">
-    <div class="coluna">
-      <a href="mpb/alceu.html"><button class="botao-estilo">Alceu</button></a>
-      <a href="mpb/ana-carolina.html"><button class="botao-estilo">Ana Carolina</button></a>
-      <a href="mpb/ana-vilela.html"><button class="botao-estilo">Ana Vilela</button></a>
-      <a href="mpb/belchior.html"><button class="botao-estilo">Belchior</button></a>
-      <a href="mpb/biquini-cavadao.html"><button class="botao-estilo">Biquini Cavadão</button></a>
-      <a href="mpb/cazuza.html"><button class="botao-estilo">Cazuza</button></a>
-      <a href="mpb/cidade-negra.html"><button class="botao-estilo">Cidade Negra</button></a>
-      <a href="mpb/cassia-eller.html"><button class="botao-estilo">Cássia Eller</button></a>
-      <a href="mpb/djavan.html"><button class="botao-estilo">Djavan</button></a>
-      <a href="mpb/engenheiros-do-havai.html"><button class="botao-estilo">Engenheiros do Havai</button></a>
-      <a href="mpb/fagner.html"><button class="botao-estilo">Fagner</button></a>
-      <a href="mpb/gilberto-gil.html"><button class="botao-estilo">Gilberto Gil</button></a>
-      <a href="mpb/j-quest.html"><button class="botao-estilo">J Quest</button></a>
-      <a href="mpb/jorge-benjor.html"><button class="botao-estilo">Jorge Benjor</button></a>
-      <a href="mpb/kell-smith.html"><button class="botao-estilo">Kell Smith</button></a>
-      <a href="mpb/legiao-urbana.html"><button class="botao-estilo">Legião Urbana</button></a>
-      <a href="mpb/lulu-santos.html"><button class="botao-estilo">Lulu Santos</button></a>
-      <a href="mpb/mamonas-assassinas.html"><button class="botao-estilo">Mamonas Assassinas</button></a>
-      <a href="mpb/milton-nascimento.html"><button class="botao-estilo">Milton Nascimento</button></a>
-      <a href="mpb/paralamas-do-sucesso.html"><button class="botao-estilo">Paralamas do Sucesso</button></a>
-    </div>
+  <header>
+    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>MPB</h1>
+  </header>
 
-    <div class="coluna">
-      <a href="mpb/paulo-ricardo.html"><button class="botao-estilo">Paulo Ricardo</button></a>
-      <a href="mpb/peninha.html"><button class="botao-estilo">Peninha</button></a>
-      <a href="mpb/raul-seixas.html"><button class="botao-estilo">Raul Seixas</button></a>
-      <a href="mpb/regae.html"><button class="botao-estilo">Regae</button></a>
-      <a href="mpb/renato-e-seus-blue-caps.html"><button class="botao-estilo">Renato e Seus Blue Caps</button></a>
-      <a href="mpb/roberto-carlos.html"><button class="botao-estilo">Roberto Carlos</button></a>
-      <a href="mpb/robinson-monteiro.html"><button class="botao-estilo">Robinson Monteiro</button></a>
-      <a href="mpb/rock.html"><button class="botao-estilo">Rock</button></a>
-      <a href="mpb/rosana.html"><button class="botao-estilo">Rosana</button></a>
-      <a href="mpb/roupa-nova.html"><button class="botao-estilo">Roupa Nova</button></a>
-      <a href="mpb/sandra-de-sa.html"><button class="botao-estilo">Sandra de Sá</button></a>
-      <a href="mpb/seu-jorge.html"><button class="botao-estilo">Seu Jorge</button></a>
-      <a href="mpb/skank.html"><button class="botao-estilo">Skank</button></a>
-      <a href="mpb/the-fevers.html"><button class="botao-estilo">The Fevers</button></a>
-      <a href="mpb/tim-maia.html"><button class="botao-estilo">Tim Maia</button></a>
-      <a href="mpb/vitor-kley.html"><button class="botao-estilo">Vitor Kley</button></a>
-      <a href="mpb/wando.html"><button class="botao-estilo">Wando</button></a>
-      <a href="mpb/yahoo.html"><button class="botao-estilo">Yahoo</button></a>
-      <a href="mpb/ze-ramalho.html"><button class="botao-estilo">Zé Ramalho</button></a>
+  <main>
+    <div class="moldura">
+      <div class="botoes-colunas">
+        <a href="mpb/alceu.html" class="botao-cantor">Alceu</a>
+        <a href="mpb/ana-carolina.html" class="botao-cantor">Ana Carolina</a>
+        <a href="mpb/ana-vilela.html" class="botao-cantor">Ana Vilela</a>
+        <a href="mpb/belchior.html" class="botao-cantor">Belchior</a>
+        <a href="mpb/biquini-cavadao.html" class="botao-cantor">Biquini Cavadão</a>
+        <a href="mpb/cassia-eller.html" class="botao-cantor">Cássia Eller</a>
+        <a href="mpb/cazuza.html" class="botao-cantor">Cazuza</a>
+        <a href="mpb/cidade-negra.html" class="botao-cantor">Cidade Negra</a>
+        <a href="mpb/djavan.html" class="botao-cantor">Djavan</a>
+        <a href="mpb/engenheiros-do-havai.html" class="botao-cantor">Engenheiros do Havai</a>
+        <a href="mpb/fagner.html" class="botao-cantor">Fagner</a>
+        <a href="mpb/gilberto-gil.html" class="botao-cantor">Gilberto Gil</a>
+        <a href="mpb/j-quest.html" class="botao-cantor">J Quest</a>
+        <a href="mpb/jorge-benjor.html" class="botao-cantor">Jorge Benjor</a>
+        <a href="mpb/kell-smith.html" class="botao-cantor">Kell Smith</a>
+        <a href="mpb/legiao-urbana.html" class="botao-cantor">Legião Urbana</a>
+        <a href="mpb/lulu-santos.html" class="botao-cantor">Lulu Santos</a>
+        <a href="mpb/mamonas-assassinas.html" class="botao-cantor">Mamonas Assassinas</a>
+        <a href="mpb/milton-nascimento.html" class="botao-cantor">Milton Nascimento</a>
+        <a href="mpb/paralamas-do-sucesso.html" class="botao-cantor">Paralamas do Sucesso</a>
+        <a href="mpb/paulo-ricardo.html" class="botao-cantor">Paulo Ricardo</a>
+        <a href="mpb/peninha.html" class="botao-cantor">Peninha</a>
+        <a href="mpb/raul-seixas.html" class="botao-cantor">Raul Seixas</a>
+        <a href="mpb/regae.html" class="botao-cantor">Regae</a>
+        <a href="mpb/renato-e-seus-blue-caps.html" class="botao-cantor">Renato e Seus Blue Caps</a>
+        <a href="mpb/roberto-carlos.html" class="botao-cantor">Roberto Carlos</a>
+        <a href="mpb/robinson-monteiro.html" class="botao-cantor">Robinson Monteiro</a>
+        <a href="mpb/rock.html" class="botao-cantor">Rock</a>
+        <a href="mpb/rosana.html" class="botao-cantor">Rosana</a>
+        <a href="mpb/roupa-nova.html" class="botao-cantor">Roupa Nova</a>
+        <a href="mpb/sandra-de-sa.html" class="botao-cantor">Sandra de Sá</a>
+        <a href="mpb/seu-jorge.html" class="botao-cantor">Seu Jorge</a>
+        <a href="mpb/skank.html" class="botao-cantor">Skank</a>
+        <a href="mpb/the-fevers.html" class="botao-cantor">The Fevers</a>
+        <a href="mpb/tim-maia.html" class="botao-cantor">Tim Maia</a>
+        <a href="mpb/vitor-kley.html" class="botao-cantor">Vitor Kley</a>
+        <a href="mpb/wando.html" class="botao-cantor">Wando</a>
+        <a href="mpb/yahoo.html" class="botao-cantor">Yahoo</a>
+        <a href="mpb/ze-ramalho.html" class="botao-cantor">Zé Ramalho</a>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
+    <p style="color: #ccc; font-size: 0.9em;">&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
+    <p style="color: #888; font-size: 0.8em;">
+      <a href="https://www.instagram.com/paulosergiodosreisbedendo" target="_blank" style="color: gold; text-decoration: none;">Instagram</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Termos de Uso</a> |
+      <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
+    </p>
+  </footer>
 </body>
 </html>
