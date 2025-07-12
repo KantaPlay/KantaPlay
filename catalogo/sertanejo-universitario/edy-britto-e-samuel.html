@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edy Britto e Samuel</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Edy Britto e Samuel</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="E amor demais - Edy Britto e Samuel"> E amor demais - Edy Britto e Samuel</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edy Britto e Samuel Part Gusttavo Lima - Homem chora sim LETRA - MK"> Edy Britto e Samuel Part Gusttavo Lima - Homem chora sim LETRA - MK</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu to caindo fora - Edy Britto e Samuel"> Eu to caindo fora - Edy Britto e Samuel</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mil vezes antes de amar - Edy Britto e Samuel"> Mil vezes antes de amar - Edy Britto e Samuel</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Nosso segredo - Edy Britto e Samuel"> Nosso segredo - Edy Britto e Samuel</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ponto G - Edy Britto e Samuel"> Ponto G - Edy Britto e Samuel</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="PontoG-EdyBritto&Samuel"> PontoG-EdyBritto&Samuel</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>

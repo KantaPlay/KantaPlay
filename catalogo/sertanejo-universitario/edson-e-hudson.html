@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edson e Hudson</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Edson e Hudson</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson E Hudson - Minha Estrela Perdida LETRA - MK"> Edson E Hudson - Minha Estrela Perdida LETRA - MK</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson E Hudson - Nao Tem Dia Nao Tem Hora"> Edson E Hudson - Nao Tem Dia Nao Tem Hora</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson e Hudson - Escandalo de amor"> Edson e Hudson - Escandalo de amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson e Hudson Porque Chora a Tarde Com Letra"> Edson e Hudson Porque Chora a Tarde Com Letra</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson_e_Hudson-Quer Namorar Comigo"> Edson_e_Hudson-Quer Namorar Comigo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson_e_Hudson_-_Nao deixo nao"> Edson_e_Hudson_-_Nao deixo nao</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Edson_e_hudson_-_Meu_amor_e_10_(FM)"> Edson_e_hudson_-_Meu_amor_e_10_(FM)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Esqueca_que _eu_te_amo-Edson&H"> Esqueca_que _eu_te_amo-Edson&H</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="FOI DEUS - EDSON & HUDSON"> FOI DEUS - EDSON & HUDSON</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Meu amor é 10 - Edson e hudson"> Meu amor é 10 - Edson e hudson</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Te dar tristeza nunca mais - Edson & H"> Te dar tristeza nunca mais - Edson & H</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Te quero pra mim - Edson e Hudson -RE (1)"> Te quero pra mim - Edson e Hudson -RE (1)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="UMA CANCAO PRA VOCE - EDSON (1)"> UMA CANCAO PRA VOCE - EDSON (1)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Viva a vida - Edson & H"> Viva a vida - Edson & H</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>

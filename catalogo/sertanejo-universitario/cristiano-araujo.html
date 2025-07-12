@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristiano Araújo</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Cristiano Araújo</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="Balada prime - Cristiano Araujo"> Balada prime - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Barabere - Cristiano Araujo"> Barabere - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Caso indefinido - Cristiano Araujo"> Caso indefinido - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ce que sabe - Cristiano Araujo"> Ce que sabe - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="E com ela que eu estou - Cristiano Araujo"> E com ela que eu estou - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Efeitos-CristianoAraujo"> Efeitos-CristianoAraujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Empinadinha - Cristiano Araujo"> Empinadinha - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu sou seu meu bem - Cristiano A"> Eu sou seu meu bem - Cristiano A</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Frases de Fogo - Cristiano Araujo"> Frases de Fogo - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Hoje eu to terrivel - Cristiano Araujo"> Hoje eu to terrivel - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Maus Bocados - Cristiano Araujo"> Maus Bocados - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Me apego - Cristiano A"> Me apego - Cristiano A</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mesmo longe - Cristiano Araujo e N. M."> Mesmo longe - Cristiano Araujo e N. M.</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Princesa dos meus sonhos - Cristiano Araujo"> Princesa dos meus sonhos - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Quebrou a cara - Cristiano Araujo"> Quebrou a cara - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Simples assim - Cristiano Araujo e Humberto & Ronaldo (Letra)"> Simples assim - Cristiano Araujo e Humberto & Ronaldo (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ta Mais Pra Capetinha - Cristiano Araujo"> Ta Mais Pra Capetinha - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ta soltinha - Thiago Brava, Cristiano Araujo e Mc Catra"> Ta soltinha - Thiago Brava, Cristiano Araujo e Mc Catra</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Voce Mudou - Cristiano Araujo"> Voce Mudou - Cristiano Araujo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="É fato - Cristiano Araujo"> É fato - Cristiano Araujo</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>
