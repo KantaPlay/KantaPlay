@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zé Neto e Cristiano</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Zé Neto e Cristiano</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amigo taxista - Ze Neto e Cristiano"> Amigo taxista - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bebida na Ferida - Ze Neto e Cristiano - Letra OK"> Bebida na Ferida - Ze Neto e Cristiano - Letra OK</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bobo fui eu - Ze Neto e Cristiano"> Bobo fui eu - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Cadeira de aco - Ze Neto e Cristiano"> Cadeira de aco - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Derreter a alianca - Ze Neto e Cristiano"> Derreter a alianca - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Estamos quites - Ze Neto e Cristiano part.  Henrique e Juliano"> Estamos quites - Ze Neto e Cristiano part.  Henrique e Juliano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Modão - Saudade da minha terra - Ze Neto e Cristiano"> Modão - Saudade da minha terra - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Notificacao preferida - Ze Neto e Cristiano"> Notificacao preferida - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pendrive de modao - Munhoz e Mariano part. Ze Neto e Cristiano"> Pendrive de modao - Munhoz e Mariano part. Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pra rezar ninguem me chama - Ze Neto e Cristiano"> Pra rezar ninguem me chama - Ze Neto e Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Status-que-eu-nao-queria - Ze-Neto-e-Cristiano"> Status-que-eu-nao-queria - Ze-Neto-e-Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tem Que Ter Pegada - Ze Neto & Cristiano"> Tem Que Ter Pegada - Ze Neto & Cristiano</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ze Neto e Cristiano - Abaixa o som"> Ze Neto e Cristiano - Abaixa o som</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ze Neto e Cristiano - Largado as tracas"> Ze Neto e Cristiano - Largado as tracas</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ze Neto e Cristiano - Largado as tracas LETRA"> Ze Neto e Cristiano - Largado as tracas LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ze Neto e Cristiano - Mulher Maravilha LETRA"> Ze Neto e Cristiano - Mulher Maravilha LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ze Neto e Cristiano - Patio do Posto LETRA"> Ze Neto e Cristiano - Patio do Posto LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu ligo pra você"> Eu ligo pra você</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Seu polícia"> Seu polícia</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tá namorando com o litro"> Tá namorando com o litro</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>

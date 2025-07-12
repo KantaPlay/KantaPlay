@@ -13,61 +13,42 @@
       text-align: center;
       padding: 20px;
     }
+
     header .logo {
       max-width: 400px;
       height: auto;
       margin-bottom: 20px;
     }
+
     h1 {
       color: gold;
       text-shadow: 0 0 10px gold;
       font-size: 2em;
     }
+
     .caixa {
       background-color: #111;
       border: 2px solid gold;
       border-radius: 12px;
       padding: 20px;
-      max-width: 500px;
-      margin: 30px auto;
-    }
-    .musica {
+      max-width: 600px;
+      margin: 0 auto 20px;
       text-align: left;
-      margin: 10px 0;
     }
-    label {
-      margin-left: 8px;
-      font-size: 1em;
+
+    .musica {
+      margin: 5px 0;
     }
+
     .botao-whatsapp {
-      margin-top: 20px;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
       background-color: gold;
       color: black;
-      cursor: pointer;
-      box-shadow: 0 0 10px gold;
-      transition: all 0.3s ease;
-    }
-    .botao-whatsapp:hover {
-      background-color: white;
-      color: black;
-    }
-    footer {
-      background-color: #111;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: gold;
+      padding: 10px 20px;
       text-decoration: none;
-    }
-    footer p {
-      color: #ccc;
-      font-size: 0.9em;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -76,247 +57,125 @@
     <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
     <h1>Jorge e Mateus</h1>
   </header>
-
-  <main>
-    <form class="caixa" id="caixa-musicas">
-      <div class="musica">
-  <input type="checkbox" id="musica1" name="musicas" value="A Hora E Agora">
-  <label for="musica1">A Hora E Agora</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica2" name="musicas" value="Alguem No Seu Lugar">
-  <label for="musica2">Alguem No Seu Lugar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica3" name="musicas" value="Amo Noite Dia Misterios Se Eu Pedir Volta">
-  <label for="musica3">Amo Noite Dia Misterios Se Eu Pedir Volta</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica4" name="musicas" value="Amo Noite E Dia">
-  <label for="musica4">Amo Noite E Dia</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica5" name="musicas" value="Amor Covarde">
-  <label for="musica5">Amor Covarde</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica6" name="musicas" value="Amor Nao E Jogo De Azar">
-  <label for="musica6">Amor Nao E Jogo De Azar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica7" name="musicas" value="Amor Pra Recomecar">
-  <label for="musica7">Amor Pra Recomecar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica8" name="musicas" value="Antonimos">
-  <label for="musica8">Antonimos</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica9" name="musicas" value="Armadilha">
-  <label for="musica9">Armadilha</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica10" name="musicas" value="Chove Chove">
-  <label for="musica10">Chove Chove</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica11" name="musicas" value="Contrato">
-  <label for="musica11">Contrato</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica12" name="musicas" value="Do Brasil A Argentina">
-  <label for="musica12">Do Brasil A Argentina</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica13" name="musicas" value="Duas Metades">
-  <label for="musica13">Duas Metades</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica14" name="musicas" value="Enquanto Houver Razoes">
-  <label for="musica14">Enquanto Houver Razoes</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica15" name="musicas" value="Espelho">
-  <label for="musica15">Espelho</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica16" name="musicas" value="Espinho Na Cama">
-  <label for="musica16">Espinho Na Cama</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica17" name="musicas" value="Esquece O Medo E Vem">
-  <label for="musica17">Esquece O Medo E Vem</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica18" name="musicas" value="Eu Quero So Voce">
-  <label for="musica18">Eu Quero So Voce</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica19" name="musicas" value="Eu Te Amo Tanto">
-  <label for="musica19">Eu Te Amo Tanto</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica20" name="musicas" value="Flor">
-  <label for="musica20">Flor</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica21" name="musicas" value="Fogueira">
-  <label for="musica21">Fogueira</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica22" name="musicas" value="Inventor Dos Amores">
-  <label for="musica22">Inventor Dos Amores</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica23" name="musicas" value="Louca De Saudade">
-  <label for="musica23">Louca De Saudade</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica24" name="musicas" value="Meu Cenario Ideal">
-  <label for="musica24">Meu Cenario Ideal</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica25" name="musicas" value="Misterios">
-  <label for="musica25">Misterios</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica26" name="musicas" value="Nocaute">
-  <label for="musica26">Nocaute</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica27" name="musicas" value="Os Anjos Cantam">
-  <label for="musica27">Os Anjos Cantam</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica28" name="musicas" value="Paredes">
-  <label for="musica28">Paredes</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica29" name="musicas" value="Pense Em Mim">
-  <label for="musica29">Pense Em Mim</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica30" name="musicas" value="Pergunta Boba">
-  <label for="musica30">Pergunta Boba</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica31" name="musicas" value="Pra Que Entender">
-  <label for="musica31">Pra Que Entender</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica32" name="musicas" value="Pra Ter O Seu Amor">
-  <label for="musica32">Pra Ter O Seu Amor</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica33" name="musicas" value="Problema">
-  <label for="musica33">Problema</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica34" name="musicas" value="Propaganda">
-  <label for="musica34">Propaganda</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica35" name="musicas" value="Querendo Te Amar">
-  <label for="musica35">Querendo Te Amar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica36" name="musicas" value="Se O Amor Tiver Lugar">
-  <label for="musica36">Se O Amor Tiver Lugar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica37" name="musicas" value="Sosseguei">
-  <label for="musica37">Sosseguei</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica38" name="musicas" value="Tem Nada Haver Te Cuida Coracao">
-  <label for="musica38">Tem Nada Haver Te Cuida Coracao</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica39" name="musicas" value="Terra Sem Cep">
-  <label for="musica39">Terra Sem Cep</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica40" name="musicas" value="Tijolao">
-  <label for="musica40">Tijolao</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica41" name="musicas" value="Trincadinho M">
-  <label for="musica41">Trincadinho M</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica42" name="musicas" value="Voa Beija Flor">
-  <label for="musica42">Voa Beija Flor</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica43" name="musicas" value="Logo Eu">
-  <label for="musica43">Logo Eu</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica44" name="musicas" value="Mil Anos">
-  <label for="musica44">Mil Anos</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica45" name="musicas" value="Nao Da Pra Esquecer Teus Olhos">
-  <label for="musica45">Nao Da Pra Esquecer Teus Olhos</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica46" name="musicas" value="Pode Chorar">
-  <label for="musica46">Pode Chorar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica47" name="musicas" value="Seu Astral">
-  <label for="musica47">Seu Astral</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica48" name="musicas" value="Ta Com Medo De Amar">
-  <label for="musica48">Ta Com Medo De Amar</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica49" name="musicas" value="Tempo Ao Tempo">
-  <label for="musica49">Tempo Ao Tempo</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica50" name="musicas" value="Tudo Ou Nada">
-  <label for="musica50">Tudo Ou Nada</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica51" name="musicas" value="Um Dia Te Levo Comigo">
-  <label for="musica51">Um Dia Te Levo Comigo</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica52" name="musicas" value="Vestigios">
-  <label for="musica52">Vestigios</label>
-</div>
-<div class="musica">
-  <input type="checkbox" id="musica53" name="musicas" value="Voce É Minha Religiao">
-  <label for="musica53">Voce É Minha Religiao</label>
-</div>
-      <button type="button" onclick="enviarParaWhatsApp()" class="botao-whatsapp">📲 Enviar lista para WhatsApp</button>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="A hora e agora"> A hora e agora</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="ALGUEM NO SEU LUGAR -JORGE & MATHEUS"> ALGUEM NO SEU LUGAR -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="AMO NOITE E DIA -JORGE & MATHEUS"> AMO NOITE E DIA -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="AMOR NAO E JOGO DE AZAR - JORGE & MATHEUS"> AMOR NAO E JOGO DE AZAR - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amo noite e dia - remix"> Amo noite e dia - remix</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amo_noite_dia_Misterios_Se_eu_pedir_volta"> Amo_noite_dia_Misterios_Se_eu_pedir_volta</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor Covarde-(Romantica)-Jorge&M"> Amor Covarde-(Romantica)-Jorge&M</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor pra recomecar"> Amor pra recomecar</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Antonimos JORGE & MATHEUS"> Antonimos JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Armadilha - Fred & Gustavo e Jorge & Matheus"> Armadilha - Fred & Gustavo e Jorge & Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bruno & Marrone, Jorge & Mateus - Surto De Amor"> Bruno & Marrone, Jorge & Mateus - Surto De Amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="CHOVE CHOVE - JORGE & MATHEUS"> CHOVE CHOVE - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="CONTRATO"> CONTRATO</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Do Brasil a Argentina"> Do Brasil a Argentina</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Duas Metades - JORGE & MATHEUS"> Duas Metades - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="ESQUECE O MEDO E VEM -JORGE & MATHEUS"> ESQUECE O MEDO E VEM -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Enquanto houver razoes -JORGE & MATHEUS"> Enquanto houver razoes -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Espelho-JORGE & MATHEUS"> Espelho-JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Espinho na cama  - SOL"> Espinho na cama  - SOL</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu quero so voce -Jorge & Mateus"> Eu quero so voce -Jorge & Mateus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu te amo tanto -JORGE & MATHEUS"> Eu te amo tanto -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu_quero_so_voce-Jorge&Mateus"> Eu_quero_so_voce-Jorge&Mateus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="FOGUEIRA - JORGE & MATHEUS (letra)"> FOGUEIRA - JORGE & MATHEUS (letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Fernando e Sorocaba e - Bom rapaz"> Fernando e Sorocaba e - Bom rapaz</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Flor - Jorge & Mateus"> Flor - Jorge & Mateus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="George Henrique e Rodrigo - Deixa eu voar (Part.)"> George Henrique e Rodrigo - Deixa eu voar (Part.)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Guerra Fria - Sorriso Maroto Part"> Guerra Fria - Sorriso Maroto Part</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Guerreiro - Victor e leo e"> Guerreiro - Victor e leo e</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Gustavo Mioto part - Anti amor"> Gustavo Mioto part - Anti amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Gusttavo Lima - Tá faltando eu (Part.)"> Gusttavo Lima - Tá faltando eu (Part.)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="DONA MARIA"> DONA MARIA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="OS ANJOS CANTAM"> OS ANJOS CANTAM</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="JORGE_E_MATEUS_PENSE_EM_MIM"> JORGE_E_MATEUS_PENSE_EM_MIM</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Misterios"> Misterios</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="A gente nem ficou"> A gente nem ficou</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bandeira branca - Empreitada perigosa - Vou tomá um pingão - Tchau amor"> Bandeira branca - Empreitada perigosa - Vou tomá um pingão - Tchau amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Calma LETRA"> Calma LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Inventor dos amores"> Inventor dos amores</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Louca de saudade"> Louca de saudade</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Meu cenario ideal"> Meu cenario ideal</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Nocaute"> Nocaute</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pergunta boba (Part. Maestro pinocchio)"> Pergunta boba (Part. Maestro pinocchio)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pra ter o seu amor"> Pra ter o seu amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Problema"> Problema</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Propaganda"> Propaganda</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Se o amor tiver lugar (Com letra)"> Se o amor tiver lugar (Com letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sosseguei LETRA"> Sosseguei LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tijolao"> Tijolao</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu Quero So Voce"> Eu Quero So Voce</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Terra sem cep"> Terra sem cep</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge-e-Mateus-Trincadinho-LETRA-M"> Jorge-e-Mateus-Trincadinho-LETRA-M</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge___Mateus_Onde_haja_sol"> Jorge___Mateus_Onde_haja_sol</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge___Mateus_cavalo_enxuto"> Jorge___Mateus_cavalo_enxuto</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus-Tem_Nada_Haver-Te_Cuida_Coracao"> Jorge_e_Mateus-Tem_Nada_Haver-Te_Cuida_Coracao</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_-_A_hora_e_agora__L"> Jorge_e_Mateus_-_A_hora_e_agora__L</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_-_Duas_metades"> Jorge_e_Mateus_-_Duas_metades</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_-_Fogueira_(Original)"> Jorge_e_Mateus_-_Fogueira_(Original)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_Fruto_Proibido"> Jorge_e_Mateus_Fruto_Proibido</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_Querendo_te_Amar"> Jorge_e_Mateus_Querendo_te_Amar</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus_Voa_Beija_Flor_Original"> Jorge_e_Mateus_Voa_Beija_Flor_Original</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus___Paredes"> Jorge_e_Mateus___Paredes</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_Mateus___Pra_que_entender"> Jorge_e_Mateus___Pra_que_entender</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Jorge_e_mateus_Chove__chove"> Jorge_e_mateus_Chove__chove</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Logo eu - Jorge & Matheus"> Logo eu - Jorge & Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Logo eu -Jorge & Matheus"> Logo eu -Jorge & Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Louca de saudade"> Louca de saudade</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Louca de saudade JORGE & MATHEUS"> Louca de saudade JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="MIL ANOS - JORGE & MATHEUS"> MIL ANOS - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="MISTERIOS - JORGE & MATHEUS"> MISTERIOS - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Marcos e Belutti - Romantico Anonimo"> Marcos e Belutti - Romantico Anonimo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mastigando agua - Jorge e Matheus"> Mastigando agua - Jorge e Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mastigando agua JORGE & MATHEUS"> Mastigando agua JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Meu cenario ideal"> Meu cenario ideal</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Meu cenario ideal JORGE & MATHEUS"> Meu cenario ideal JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mil anos - Jorge e Matheus"> Mil anos - Jorge e Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Nao da pra esquecer teus olhos -JORGE & MATHEUS"> Nao da pra esquecer teus olhos -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Nocaute"> Nocaute</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Onde Nasce o Sol - Bruninho e Davi  e Jorge e M."> Onde Nasce o Sol - Bruninho e Davi  e Jorge e M.</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Onde_haja_sol JORGE & MATHEUS"> Onde_haja_sol JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Os anjos cantam"> Os anjos cantam</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ou soma ou some"> Ou soma ou some</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="PIRRACA -JORGE & MATHEUS"> PIRRACA -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pastoral do esporte - Jorge Luiz"> Pastoral do esporte - Jorge Luiz</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pergunta Boba"> Pergunta Boba</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pode chorar - Jorge & Mateus"> Pode chorar - Jorge & Mateus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Porque - JORGE & MATHEUS"> Porque - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pra que entender - JORGE & MATHEUS"> Pra que entender - JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pra ter o seu amor"> Pra ter o seu amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Problema"> Problema</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Problema JORGE & MATHEUS"> Problema JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="SE EU CHORAR - JORGE & MATHEUS s"> SE EU CHORAR - JORGE & MATHEUS s</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="SE EU CHORAR"> SE EU CHORAR</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Se eu pedir ce volta - Jorge & Mateus"> Se eu pedir ce volta - Jorge & Mateus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Se eu pedir ce volta Jorge & Mateu-- s"> Se eu pedir ce volta Jorge & Mateu-- s</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Seu astral"> Seu astral</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sofazinho - Luan Santana part"> Sofazinho - Luan Santana part</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sosseguei"> Sosseguei</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="TEMPO AO TEMPO -JORGE & MATHEUS"> TEMPO AO TEMPO -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ta com medo de amar - JORGE & MATHEUS (Letra)"> Ta com medo de amar - JORGE & MATHEUS (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ta faltando eu - Gusttavo Lima e Jorge Matheus"> Ta faltando eu - Gusttavo Lima e Jorge Matheus</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tijolao LETRA"> Tijolao LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Traz Ela De Volta Pra Mim JORGE & MATHEUS (Original)"> Traz Ela De Volta Pra Mim JORGE & MATHEUS (Original)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tudo Ou Nada"> Tudo Ou Nada</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tudo Ou Nada JORGE & MATHEUS"> Tudo Ou Nada JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="UM DIA TE LEVO COMIGO -JORGE & MATHEUS"> UM DIA TE LEVO COMIGO -JORGE & MATHEUS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Vestigios - Jorge  Matheus- (Letra)"> Vestigios - Jorge  Matheus- (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Voce é minha religiao"> Voce é minha religiao</label></div>
     </form>
-  </main>
-
-  <footer>
-    <a href="../index.html">← Voltar para Sertanejo</a>
-    <p>&copy; 2025 KantaPlay - Todos os direitos reservados.</p>
-  </footer>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
 
   <script>
-    function enviarParaWhatsApp() {
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-      let musicasSelecionadas = [];
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          musicasSelecionadas.push(cb.value);
-        }
-      });
-      if (musicasSelecionadas.length === 0) {
-        alert('Por favor, selecione ao menos uma música.');
-        return;
-      }
-      const mensagemBruta = "Olá, já fiz o Pix e segue a lista dos playbacks que escolhi:\n\n" +
-        musicasSelecionadas.map(m => "- " + m).join("\n");
-      const url = "https://wa.me/5511972330562?text=" + encodeURIComponent(mensagemBruta);
-      window.open(url, '_blank');
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
     }
   </script>
 </body>

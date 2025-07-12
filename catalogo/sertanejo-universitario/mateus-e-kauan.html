@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateus e Kauan</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Mateus e Kauan</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="A rosa e o Beija Flor"> A rosa e o Beija Flor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor sem medida - Matheus e Kauan"> Amor sem medida - Matheus e Kauan</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor sem medida - Matheus e Kauan (2)"> Amor sem medida - Matheus e Kauan (2)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ao vivo e a cores - M &  K part. Anitta"> Ao vivo e a cores - M &  K part. Anitta</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Decide ai - Matheus e kauan"> Decide ai - Matheus e kauan</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Gatilho - Matheus e Kauan"> Gatilho - Matheus e Kauan</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mateus-e-Kauan-Quarta-cadeira-L"> Mateus-e-Kauan-Quarta-cadeira-L</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus E Kauan-Que Sorte A Nossa #L"> Matheus E Kauan-Que Sorte A Nossa #L</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - Cerveja sal e limao LETRA"> Matheus e Kauan - Cerveja sal e limao LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - Nessas horas"> Matheus e Kauan - Nessas horas</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - O nosso santo bateu"> Matheus e Kauan - O nosso santo bateu</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - Que Sorte a Nossa  (L)"> Matheus e Kauan - Que Sorte a Nossa  (L)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - Sofro tudo de novo"> Matheus e Kauan - Sofro tudo de novo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - Te assumi pro brasil"> Matheus e Kauan - Te assumi pro brasil</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Matheus e Kauan - To com moral no ceu"> Matheus e Kauan - To com moral no ceu</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Meu coracao deu PT - Wesley Safadao e"> Meu coracao deu PT - Wesley Safadao e</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Oitava dose"> Oitava dose</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ser humano ou anjo - Matheus e Kauan"> Ser humano ou anjo - Matheus e Kauan</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>

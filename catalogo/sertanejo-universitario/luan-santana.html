@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luan Santana</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Luan Santana</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="93 Million Miles - Luan e John  Kip"> 93 Million Miles - Luan e John  Kip</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor distante + Inquilina de violeiro  (Letra)"> Amor distante + Inquilina de violeiro  (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="As lembrancas vao na mala"> As lembrancas vao na mala</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bailando  e Enrique Iglesias"> Bailando  e Enrique Iglesias</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="CHITÃOZINHO - A MAIS BONITA DAS NOITES"> CHITÃOZINHO - A MAIS BONITA DAS NOITES</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Cantada"> Cantada</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Cartorio - Claudia Leite e"> Cartorio - Claudia Leite e</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ce topa"> Ce topa</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Chuva de arroz"> Chuva de arroz</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Chuvas de arroz  (Versão arrocha lento)"> Chuvas de arroz  (Versão arrocha lento)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Donzela"> Donzela</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Escreve ai"> Escreve ai</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu nao merecia isso"> Eu nao merecia isso</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Eu, você, o mar e ela"> Eu, você, o mar e ela</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Garotas nao merecem chorar"> Garotas nao merecem chorar</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Hoje Nao - Thaeme e Thiago e"> Hoje Nao - Thaeme e Thiago e</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="ADRENALINA"> ADRENALINA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="O sograo caprichou"> O sograo caprichou</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="PRA VOCE LEMBRAR DE MIM"> PRA VOCE LEMBRAR DE MIM</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Parede branca"> Parede branca</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Porto do amor  e Mana"> Porto do amor  e Mana</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Quando a Bad bater LETRA"> Quando a Bad bater LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="SINAIS"> SINAIS</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sempre Com Voce"> Sempre Com Voce</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tanto Faz"> Tanto Faz</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Te esperando - Luan S"> Te esperando - Luan S</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tudo que voce quiser"> Tudo que voce quiser</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="VOU VOAR"> VOU VOAR</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Voce nao sabe o que e amor"> Voce nao sabe o que e amor</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Você de mim nao sai"> Você de mim nao sai</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>

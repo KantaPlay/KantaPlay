@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcos e Belutti</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>Marcos e Belutti</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="Aceito sua decisao - Marcos e Beluttti"> Aceito sua decisao - Marcos e Beluttti</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor pra vida inteira"> Amor pra vida inteira</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Bora se acabar - Marcos & Belutti (Letra)"> Bora se acabar - Marcos & Belutti (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Calma ai"> Calma ai</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Desce do salto - Marcos & B"> Desce do salto - Marcos & B</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Domingo de manha"> Domingo de manha</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Dupla solidao  (Letra)"> Dupla solidao  (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Fica Comigo - Fernando e Sorocaba part"> Fica Comigo - Fernando e Sorocaba part</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="I love you - Marcos & Belutti"> I love you - Marcos & Belutti</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Marcos & Belutti - I love you"> Marcos & Belutti - I love you</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Mentirosa (com letra) (Karaoteca.com)"> Mentirosa (com letra) (Karaoteca.com)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor pra vida inteira"> Amor pra vida inteira</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Domingo de manha LETRA"> Domingo de manha LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Nova Namorada - Marcos & Belutti (Letra)"> Nova Namorada - Marcos & Belutti (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="PERDOA AMOR - MARCOS & BELUTTI (1)"> PERDOA AMOR - MARCOS & BELUTTI (1)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Romantico anonimo - Marcos e Belluti"> Romantico anonimo - Marcos e Belluti</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="SEM ME CONTROLAR - MARCOS & BELUTTI"> SEM ME CONTROLAR - MARCOS & BELUTTI</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sem me controlar  (Letra)"> Sem me controlar  (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Sera que vai rola  (Letra)"> Sera que vai rola  (Letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ta tarada - Cacio & Marcos(letra)"> Ta tarada - Cacio & Marcos(letra)</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tudo no olhar - Marcos e Beluti"> Tudo no olhar - Marcos e Beluti</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Tô no buteco"> Tô no buteco</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>
