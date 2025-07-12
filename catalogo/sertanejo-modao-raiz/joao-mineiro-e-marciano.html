@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Mineiro e Marciano</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header .logo {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+
+    .musica {
+      margin: 5px 0;
+    }
+
+    .botao-whatsapp {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../../logo.png" alt="Logo KantaPlay" class="logo">
+    <h1>João Mineiro e Marciano</h1>
+  </header>
+  <div class="caixa">
+    <form id="form">
+      <div class="musica"><label><input type="checkbox" name="musica" value="ALINE"> ALINE</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Ainda Ontém Chorei de Saudades (An"> Ainda Ontém Chorei de Saudades (An</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor tem que ser amor  - REm."> Amor tem que ser amor  - REm.</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Amor-Clandestino-JoãoM.Marciano-¨L"> Amor-Clandestino-JoãoM.Marciano-¨L</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="ESSA NOITE COMO LEMBRANÇA - J.MINEIRO E MARCIANO"> ESSA NOITE COMO LEMBRANÇA - J.MINEIRO E MARCIANO</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Joao Mineiro e Marciano - Beijo do Adeus (An) GM-L"> Joao Mineiro e Marciano - Beijo do Adeus (An) GM-L</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Joao Mineiro e Marciano - So Liguei Pra Dizer Que Te Amo"> Joao Mineiro e Marciano - So Liguei Pra Dizer Que Te Amo</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Joao Mineiro e Marciano - Telefone Mais"> Joao Mineiro e Marciano - Telefone Mais</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Joao_Mineiro_e_MarcianoMilagre_da_Flecha-LETRA"> Joao_Mineiro_e_MarcianoMilagre_da_Flecha-LETRA</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Joao_Mineiro_e_Marciano_-_Amor_clandestino"> Joao_Mineiro_e_Marciano_-_Amor_clandestino</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="No mesmo lugar"> No mesmo lugar</label></div>
+      <div class="musica"><label><input type="checkbox" name="musica" value="Pago Dobrado & Wisk Com Gelo & Roupa De Lua De Mel-Chitaozinho e Xororo & Joao Mineiro E Marciano & gean E Geovani-Com Letra"> Pago Dobrado & Wisk Com Gelo & Roupa De Lua De Mel-Chitaozinho e Xororo & Joao Mineiro E Marciano & gean E Geovani-Com Letra</label></div>
+    </form>
+  </div>
+  <a class="botao-whatsapp" href="#" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</a>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = Array.from(document.querySelectorAll('input[name=musica]:checked')).map(cb => cb.value);
+      const mensagem = encodeURIComponent("Olá! Gostaria das seguintes músicas:\n" + selecionadas.join("\n"));
+      const telefone = "5511972330562";
+      window.open(`https://wa.me/${telefone}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>
