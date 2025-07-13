@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Engenheiros do Havaí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    header .logo {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+      font-size: 2em;
+    }
+    .caixa {
+      background-color: #111;
+      border: 2px solid gold;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .musica {
+      text-align: left;
+      margin: 10px 0;
+    }
+    label {
+      cursor: pointer;
+    }
+    .whatsapp-btn {
+      background-color: gold;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background-color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../../logo.png" alt="KantaPlay" class="logo">
+  </header>
+
+  <h1>Engenheiros do Havaí</h1>
+
+  <div class="caixa">
+    <form id="formMusicas">
+      <div class="musica"><input type="checkbox" name="musica" value="Infinita Highway"> <label>Infinita Highway</label></div>
+      <div class="musica"><input type="checkbox" name="musica" value="O Papa é Pop"> <label>O Papa é Pop</label></div>
+      <div class="musica"><input type="checkbox" name="musica" value="Era um Garoto"> <label>Era um Garoto</label></div>
+      <div class="musica"><input type="checkbox" name="musica" value="Refrão de Bolero"> <label>Refrão de Bolero</label></div>
+      <div class="musica"><input type="checkbox" name="musica" value="Pra Ser Sincero"> <label>Pra Ser Sincero</label></div>
+      <div class="musica"><input type="checkbox" name="musica" value="Terra de Gigantes"> <label>Terra de Gigantes</label></div>
+    </form>
+
+    <button class="whatsapp-btn" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+  </div>
+
+  <script>
+    function enviarWhatsApp() {
+      const selecionadas = [];
+      const checkboxes = document.querySelectorAll('input[name="musica"]:checked');
+      checkboxes.forEach((checkbox) => {
+        selecionadas.push(checkbox.value);
+      });
+
+      if (selecionadas.length === 0) {
+        alert('Por favor, selecione ao menos uma música.');
+        return;
+      }
+
+      const mensagem = `Olá, gostaria dos playbacks do Engenheiros do Havaí:\n- ${selecionadas.join('\n- ')}`;
+      const numero = "5511972330562";
+      const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, '_blank');
+    }
+  </script>
+
+</body>
+</html>
