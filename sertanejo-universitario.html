@@ -66,9 +66,14 @@
   </style>
 </head>
 <body>
+  <div id="contador-musicas" class="contador-flutuante" style="display: none;">
+    <span id="qtd-musicas">0</span> músicas selecionadas
+  </div>
+
   <header>
-    <img src="logo.png" alt="Logo KantaPlay" class="logo">
+    <a href="index.html" style="text-decoration: none;"><img src="logo.png" alt="Logo KantaPlay" class="logo"></a>
     <h1>Sertanejo Universitário</h1>
+    <p style="color: #25d366; font-size: 0.9em; margin-bottom: 20px;">Escolha um artista para ver as músicas</p>
   </header>
 
   <main>
@@ -126,6 +131,8 @@
         <a href="catalogo/sertanejo-universitario/zeze-di-camargo-e-luciano.html" class="botao-cantor">Zeze Di Camargo E Luciano</a>
       </div>
     </div>
+    
+    <a href="index.html" class="botao" style="margin-top: 30px;">⬅ Voltar ao Início</a>
   </main>
 
   <footer style="background-color: #111; padding: 20px; margin-top: 40px;">
@@ -136,5 +143,21 @@
       <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
     </p>
   </footer>
+
+  <script>
+    function atualizarContador() {
+      const lista = JSON.parse(localStorage.getItem('kantaplay_lista')) || [];
+      const contador = document.getElementById('contador-musicas');
+      const qtd = document.getElementById('qtd-musicas');
+      
+      if (lista.length > 0) {
+        contador.style.display = 'flex';
+        qtd.innerText = lista.length;
+      } else {
+        contador.style.display = 'none';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', atualizarContador);
+  </script>
 </body>
 </html>
