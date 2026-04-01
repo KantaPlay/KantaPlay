@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="contador-musicas" class="contador-flutuante" style="display: none;">
+    <span id="qtd-musicas">0</span> músicas selecionadas
+  </div>
+
   <header>
     <img src="logo.png" alt="Logo KantaPlay" class="logo">
     <h1>Sua diversão começa aqui</h1>
-    <h3 style="color: gold; text-shadow: 0 0 10px gold;">Envie a seleção de cada página, por que ao sair a seleção é perdida</h3>
+    <h3 id="aviso-selecao" style="color: #25d366; text-shadow: 0 0 10px #25d366;">✅ Agora suas músicas ficam salvas enquanto você navega!</h3>
   </header>
 
   <main>
@@ -18,14 +22,17 @@
       <a href="sertanejo-raiz.html" class="botao">🎤 Pacote Sertanejo Raiz</a>
       <a href="pacote-20.html" class="botao">🎶 10 Playbacks com Letra por R$ 20</a>
       <a href="catalogo.html" class="botao">🔥 Ver catálogo dos playbacks!</a>
-      </div>
+    </div>
 
     <section style="background-color: #111; padding: 20px; border: 2px solid gold; border-radius: 12px; max-width: 500px; margin: 30px auto;">
       <p style="color: white;">🎵 Cada playback custa <strong style='color: gold;'>R$3</strong>. Faça o Pix com o valor total para a chave:</p>
       <p style="font-size: 1.2em; color: gold;"><strong>11972330562</strong></p>
       <button onclick="navigator.clipboard.writeText('11972330562'); alert('Chave Pix copiada!');" class="botao">📋 Copiar chave Pix</button>
+      
       <p style="color: #aaa; margin-top: 15px;">Depois, envie a lista no WhatsApp:</p>
-      <a href="https://wa.me/5511972330562?text=Olá,+já+fiz+o+Pix+e+segue+a+lista+dos+playbacks+que+escolhi:" class="botao-whatsapp">📲 Enviar no WhatsApp</a>
+      <a href="javascript:void(0)" onclick="enviarListaWhatsApp()" class="botao-whatsapp" style="text-decoration: none; display: block; padding: 12px; border-radius: 12px; font-weight: bold;">📲 Enviar lista no WhatsApp</a>
+      
+      <span class="limpar-lista" onclick="limparSelecao()">Limpar minha lista e recomeçar</span>
     </section>
 
     <section style="margin-top: 40px;">
@@ -49,5 +56,49 @@
       <a href="#" style="color: gold; text-decoration: none;">Política de Privacidade</a>
     </p>
   </footer>
+
+  <script>
+    function atualizarContador() {
+      const lista = JSON.parse(localStorage.getItem('kantaplay_lista')) || [];
+      const contador = document.getElementById('contador-musicas');
+      const qtd = document.getElementById('qtd-musicas');
+      
+      if (lista.length > 0) {
+        contador.style.display = 'flex';
+        qtd.innerText = lista.length;
+      } else {
+        contador.style.display = 'none';
+      }
+    }
+
+    function enviarListaWhatsApp() {
+      const lista = JSON.parse(localStorage.getItem('kantaplay_lista')) || [];
+      const numero = "5511972330562";
+      
+      if (lista.length === 0) {
+        alert("Sua lista está vazia! Escolha as músicas nas páginas de catálogo primeiro.");
+        return;
+      }
+
+      let mensagem = "Olá Paulo! Já fiz o Pix e aqui está minha lista de playbacks:\n\n";
+      lista.forEach((item, index) => {
+        mensagem += (index + 1) + ". " + item + "\n";
+      });
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    }
+
+    function limparSelecao() {
+      if (confirm("Deseja realmente limpar toda a sua lista selecionada?")) {
+        localStorage.removeItem('kantaplay_lista');
+        atualizarContador();
+        alert("Lista limpa!");
+      }
+    }
+
+    // Inicializa o contador ao abrir a página
+    document.addEventListener('DOMContentLoaded', atualizarContador);
+  </script>
 </body>
 </html>
